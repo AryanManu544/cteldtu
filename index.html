@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="DTU Digital Education Platform" />
+  <link rel="icon" href="dtu-logo-removebg.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>DTU Digi Edu</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header bg-#014652 border-b border-green-800 sticky top-0 z-50">
+  <div class="header-inner max-w-7xl mx-auto px-4 flex justify-between items-center h-20 overflow-hidden">
+
+    <a href="#top" class="logo-link flex items-center gap-2 shrink">
+      <img src="images/logos/dtu_logo.png" alt="DTU Logo" class="logo-image h-10 w-auto" />
+      <span class="logo-text font-bold text-lg tracking-tight hidden sm:block">
+        Delhi Technological University
+      </span>
+      <span class="logo-text font-bold text-xl sm:hidden">DTU</span>
+    </a>
+
+    <nav class="flex items-center gap-1 sm:gap-4">
+      <a href="about-ctel.html" class="text-yellow-300 hover:text-white px-2 py-1 text-xs sm:text-sm font-medium transition-colors whitespace-nowrap">
+        About
+      </a>
+      <a href="#programmes" class="text-yellow-300 hover:text-white px-2 py-1 text-xs sm:text-sm font-medium transition-colors whitespace-nowrap">
+        Programs
+      </a>
+      <a href="#calendar" class="text-yellow-300 hover:text-white px-2 py-1 text-xs sm:text-sm font-medium transition-colors whitespace-nowrap">
+        Calendar
+      </a>
+    </nav>
+
+  </div>
+</header>
+
+  <main id="top">
+    <!-- Hero Video Section -->
+    <section class="hero">
+      <div class="hero-video-wrapper">
+        <iframe class="hero-video"
+          src="https://www.youtube.com/embed/pYfLvmp7JQw?autoplay=1&mute=1&loop=1&playlist=pYfLvmp7JQw&controls=0&showinfo=0&modestbranding=1&rel=0"
+          title="DTU Campus Video" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title">DTU Digital Education</h1>
+        <p class="hero-subtitle">
+          Executive and continuing education programmes from Delhi Technological University.
+        </p>
+        <a href="#programmes" class="hero-button">Explore Programmes</a>
+      </div>
+    </section>
+
+    <!-- Features Section (replaces News) -->
+    <section class="features" id="features">
+      <div class="section-header">
+        <h2>Why Choose DTU Digital Education?</h2>
+      </div>
+
+      <div class="features-grid">
+        <article class="feature-card feature-red">
+          <div class="feature-text">
+            <h3>Personalized Learning Paths</h3>
+            <p>
+              Tailor your learning journey with personalized recommendations based on your goals,
+              interests, and progress. The platform adjusts to offer courses and content that match
+              your learning style and pace.
+            </p>
+          </div>
+          <div class="feature-image-wrap">
+            <img src="campus-image.jpg" alt="Learning Dashboard" />
+          </div>
+        </article>
+
+        <article class="feature-card feature-blue">
+          <div class="feature-text">
+            <h3>Interactive Quizzes &amp; Assignments</h3>
+            <p>
+              Test your knowledge with engaging quizzes and real-world assignments. Immediate
+              feedback helps you identify areas for improvement, while interactive elements keep
+              learning fun and effective.
+            </p>
+          </div>
+        </article>
+
+        <article class="feature-card feature-purple">
+          <div class="feature-text">
+            <h3>Expert-Led Video Lectures</h3>
+            <p>
+              Learn from industry leaders and renowned educators through high-quality video lectures.
+              Each session is designed to be engaging and easy to follow, even for complex topics.
+            </p>
+          </div>
+        </article>
+
+        <article class="feature-image-large">
+          <img src="campus-image.jpg" alt="DTU Faculty Teaching" />
+        </article>
+      </div>
+    </section>
+
+    <!-- Programmes Section (3 cards, static) -->
+    <section class="programmes" id="programmes">
+      <div class="flex-container">
+        <div class="section-header">
+          <h2>Online Certificate Programmes</h2>
+        </div>
+        <div class="section-header">
+          <a href="programs.html" class="hero-button" style="border-color:#111827;color:#111827;">
+            View All Programmes
+          </a>
+        </div>
+      </div>
+      <div class="card-grid">
+        <!-- AI Programme Card - NOW CLICKABLE -->
+        <a href="program-ai.html" style="text-decoration: none; color: inherit;">
+          <article class="programme-card">
+            <div class="programme-image">
+              <img src="images/program/1.png" alt="AI Programme" />
+              <span class="programme-badge">TimesPro</span>
+            </div>
+            <div class="programme-body">
+              <h3>Advanced Program in Artificial Intelligence</h3>
+              <p class="programme-duration">6 Months</p>
+              <p class="programme-description">
+                A comprehensive programme on machine learning, deep learning, and AI applications for
+                industry professionals.
+              </p>
+              <p class="programme-provider">
+                Delhi Technological University (DTU, New Delhi)
+              </p>
+            </div>
+          </article>
+        </a>
+
+        <!-- Renewable Energy Programme Card -->
+        <a href="program-renewable-energy.html" style="text-decoration: none; color: inherit;">
+          <article class="programme-card">
+            <div class="programme-image">
+              <img src="images/program/2.png" alt="Renewable Energy Programme" />
+              <span class="programme-badge">TimesPro</span>
+            </div>
+            <div class="programme-body">
+              <h3>Advanced Program in Renewable &amp; Sustainable Energy</h3>
+              <p class="programme-duration">6 Months</p>
+              <p class="programme-description">
+                Learn renewable energy technologies, sustainable energy management, and policy
+                frameworks for a greener future.
+              </p>
+              <p class="programme-provider">
+                DTU Centre for Executive Programmes
+              </p>
+            </div>
+          </article>
+        </a>
+
+        <!-- Data Science Programme Card -->
+        <a href="program-data-science.html" style="text-decoration: none; color: inherit;">
+          <article class="programme-card">
+            <div class="programme-image">
+              <img src="campus-image.jpg" alt="Data Science Programme" />
+              <span class="programme-badge">TimesPro</span>
+            </div>
+            <div class="programme-body">
+              <h3>Advanced Certificate Program in Data Science &amp; AI</h3>
+              <p class="programme-duration">6 Months</p>
+              <p class="programme-description">
+                Combine modern data science tools with AI techniques to solve complex business
+                problems and build predictive models.
+              </p>
+              <p class="programme-provider">
+                DTU Centre for Executive Programmes
+              </p>
+            </div>
+          </article>
+        </a>
+
+
+        <!-- Data Science Programme Card -->
+        <a href="program-data-science.html" style="text-decoration: none; color: inherit;">
+          <article class="programme-card">
+            <div class="programme-image">
+              <img src="campus-image.jpg" alt="Data Science Programme" />
+              <span class="programme-badge">TimesPro</span>
+            </div>
+            <div class="programme-body">
+              <h3>Advanced Certificate Program in Data Science &amp; AI</h3>
+              <p class="programme-duration">6 Months</p>
+              <p class="programme-description">
+                Combine modern data science tools with AI techniques to solve complex business
+                problems and build predictive models.
+              </p>
+              <p class="programme-provider">
+                DTU Centre for Executive Programmes
+              </p>
+            </div>
+          </article>
+        </a>
+      </div>
+    </section>
+    <!-- Calendar Section -->
+    <section class="calendar-section" id="calendar">
+      <div class="py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="section-header" style="text-align: center; margin-bottom: 32px;">
+            <h2>Programme Registration Calendar</h2>
+            <p style="margin-top: 8px; font-size: 15px; color: #4b5563;">View all programme registration start dates and
+              plan your enrollment</p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Calendar Grid -->
+            <div class="lg:col-span-2">
+              <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="flex items-center justify-between mb-6">
+                  <button id="prevMonth" class="p-2 hover:bg-gray-100 rounded-full">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  <h2 id="monthYear" class="text-xl font-bold text-gray-900"></h2>
+                  <button id="nextMonth" class="p-2 hover:bg-gray-100 rounded-full">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="grid grid-cols-7 gap-1 mb-2">
+                  <div class="text-center text-sm font-semibold text-gray-600 py-2">Sun</div>
+                  <div class="text-center text-sm font-semibold text-gray-600 py-2">Mon</div>
+                  <div class="text-center text-sm font-semibold text-gray-600 py-2">Tue</div>
+                  <div class="text-center text-sm font-semibold text-gray-600 py-2">Wed</div>
+                  <div class="text-center text-sm font-semibold text-gray-600 py-2">Thu</div>
+                  <div class="text-center text-sm font-semibold text-gray-600 py-2">Fri</div>
+                  <div class="text-center text-sm font-semibold text-gray-600 py-2">Sat</div>
+                </div>
+
+                <div id="calendarDays" class="grid grid-cols-7 gap-1">
+                  <!-- Days will be inserted here by JavaScript -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Events Sidebar -->
+            <div class="lg:col-span-1">
+              <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 id="eventsTitle" class="text-xl font-bold text-gray-900 mb-4"></h3>
+                <div id="eventsList" class="space-y-4">
+                  <!-- Events will be inserted here by JavaScript -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Short Film Section (after programmes instead of separate page) -->
+    <section class="short-film">
+      <div class="short-film-inner">
+        <div class="short-film-text">
+          <h2>DTU - A Short Film</h2>
+          <p>
+            Delhi Technological University is more than just a premier engineering institute – it is
+            a crucible of innovation, leadership, and excellence. Discover the campus, the people,
+            and the spirit that drive DTU.
+          </p>
+        </div>
+        <div class="short-film-video">
+          <div class="responsive-video">
+            <iframe src="https://www.youtube.com/embed/pYfLvmp7JQw?rel=0&modestbranding=1" title="DTU - A Short Film"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Program registration events data from programs.html
+    const events = [
+      {
+        id: 1,
+        title: "Advanced Program in Artificial Intelligence",
+        startDate: new Date(2026, 2, 28), // March 28, 2026
+        duration: "6 Months",
+        status: "Registration Open",
+        link: "program-ai.html"
+      },
+      {
+        id: 2,
+        title: "Advanced Certificate Program in Data Science and AI",
+        startDate: new Date(2025, 11, 21), // December 21, 2025
+        duration: "6 Months",
+        status: "Registration Open",
+        link: "program-data-science.html"
+      },
+      {
+        id: 3,
+        title: "Leadership Program in CSR, ESG and Corporate Sustainability",
+        startDate: new Date(2025, 11, 15), // December 15, 2025
+        duration: "6 Months",
+        status: "Registration Open",
+        link: "program-csr-esg.html"
+      },
+      {
+        id: 4,
+        title: "Advanced Program in Renewable and Sustainable Energy Management",
+        startDate: new Date(2026, 0, 10), // January 10, 2026
+        duration: "6 Months",
+        status: "Registration Open",
+        link: "program-renewable-energy.html"
+      }
+    ];
+
+    let currentDate = new Date(2025, 11, 1); // December 2025
+    let selectedDate = new Date(2025, 11, 21);
+
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"];
+
+    function formatDate(date) {
+      const day = String(date.getDate()).padStart(2, '0');
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const year = date.getFullYear();
+      return `${day}/${month}/${year}`;
+    }
+
+    function getDaysInMonth(date) {
+      const year = date.getFullYear();
+      const month = date.getMonth();
+      const firstDay = new Date(year, month, 1);
+      const lastDay = new Date(year, month + 1, 0);
+      const daysInMonth = lastDay.getDate();
+      const startingDayOfWeek = firstDay.getDay();
+
+      const days = [];
+      for (let i = 0; i < startingDayOfWeek; i++) {
+        days.push(null);
+      }
+      for (let day = 1; day <= daysInMonth; day++) {
+        days.push(new Date(year, month, day));
+      }
+      return days;
+    }
+
+    function getEventsForDate(date) {
+      if (!date) return [];
+      return events.filter(event =>
+        date.getDate() === event.startDate.getDate() &&
+        date.getMonth() === event.startDate.getMonth() &&
+        date.getFullYear() === event.startDate.getFullYear()
+      );
+    }
+
+    function isSelectedDate(date) {
+      if (!date) return false;
+      return date.getDate() === selectedDate.getDate() &&
+        date.getMonth() === selectedDate.getMonth() &&
+        date.getFullYear() === selectedDate.getFullYear();
+    }
+
+    function renderCalendar() {
+      document.getElementById('monthYear').textContent =
+        `${monthNames[currentDate.getMonth()]} ${currentDate.getFullYear()}`;
+
+      const days = getDaysInMonth(currentDate);
+      const container = document.getElementById('calendarDays');
+
+      let html = '';
+      days.forEach(date => {
+        const dateEvents = getEventsForDate(date);
+        const isSelected = isSelectedDate(date);
+
+        html += `
+                    <div class="min-h-[80px] border border-gray-200 p-1 ${isSelected ? 'bg-blue-100' : 'bg-white'
+          } ${date ? 'hover:bg-gray-50 cursor-pointer' : ''}"
+                    ${date ? `onclick="selectDate(${date.getTime()})"` : ''}>
+                        ${date ? `
+                            <div class="text-sm font-medium text-gray-900 mb-1">${date.getDate()}</div>
+                            ${dateEvents.length > 0 ? `
+                                <div class="text-xs bg-green-600 text-white p-1 rounded truncate mb-1">
+                                    ${dateEvents[0].title.substring(0, 12)}...
+                                </div>
+                                ${dateEvents.length > 1 ? `
+                                    <div class="text-xs bg-blue-600 text-white p-1 rounded text-center">
+                                        +${dateEvents.length - 1} more
+                                    </div>
+                                ` : ''}
+                            ` : ''}
+                        ` : ''}
+                    </div>
+                `;
+      });
+
+      container.innerHTML = html;
+      renderEvents();
+    }
+
+    function renderEvents() {
+      document.getElementById('eventsTitle').textContent =
+        `${monthNames[currentDate.getMonth()]} Registrations`;
+
+      const monthEvents = events.filter(event =>
+        event.startDate.getMonth() === currentDate.getMonth() &&
+        event.startDate.getFullYear() === currentDate.getFullYear()
+      );
+
+      const container = document.getElementById('eventsList');
+
+      if (monthEvents.length === 0) {
+        container.innerHTML = '<p class="text-sm text-gray-500 text-center py-4">No registrations opening this month</p>';
+        return;
+      }
+
+      let html = '';
+      monthEvents.forEach(event => {
+        html += `
+                    <a href="${event.link}" class="block">
+                        <div class="border border-gray-200 rounded-lg p-4 hover:border-green-500 transition-colors">
+                            <div class="flex items-start justify-between mb-2">
+                                <span class="inline-block bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">
+                                    ${event.status}
+                                </span>
+                            </div>
+                            <h4 class="text-sm font-semibold text-gray-900 mb-2">${event.title}</h4>
+                            <p class="text-xs text-gray-600 mb-1">
+                                <strong>Registration Starts:</strong> ${formatDate(event.startDate)}
+                            </p>
+                            <p class="text-xs text-gray-600">
+                                <strong>Duration:</strong> ${event.duration}
+                            </p>
+                        </div>
+                    </a>
+                `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    function selectDate(timestamp) {
+      selectedDate = new Date(timestamp);
+      renderCalendar();
+    }
+
+    function navigateMonth(direction) {
+      currentDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + direction, 1);
+      renderCalendar();
+    }
+
+    document.getElementById('prevMonth').addEventListener('click', () => navigateMonth(-1));
+    document.getElementById('nextMonth').addEventListener('click', () => navigateMonth(1));
+
+    // Initial render
+    renderCalendar();
+  </script>
+
+  <footer class="footer">
+    <p>&copy; 2025 Delhi Technological University – Digital Education</p>
+  </footer>
+</body>
+
+</html>

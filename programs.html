@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="DTU Digital Education Platform - All Programmes" />
+    <link rel="icon" href="dtu-logo-removebg.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>DTU Programmes</title>
+    <style>
+      .filter-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .filter-label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+        font-weight: 600;
+        color: #374151;
+      }
+      .filter-checkbox {
+        width: 1.25rem;
+        height: 1.25rem;
+        cursor: pointer;
+      }
+      .programs-header {
+        margin-bottom: 2rem;
+      }
+      .programs-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #1e3a8a;
+        margin-bottom: 0.5rem;
+      }
+      .programs-subtitle {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #1e3a8a;
+        border-bottom: 2px solid #1e3a8a;
+        padding-bottom: 0.5rem;
+        display: inline-block;
+      }
+      .program-item {
+        background: white;
+        border: 2px solid #fecaca;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        margin-bottom: 2rem;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        transition: box-shadow 0.3s;
+      }
+      .program-item:hover {
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+      .program-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 0;
+      }
+      .program-left {
+        background: linear-gradient(to bottom right, #dcfce7, #bbf7d0);
+        padding: 2rem;
+        position: relative;
+        min-height: 300px;
+      }
+      .program-info-top {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        display: flex;
+        gap: 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #374151;
+      }
+      .program-badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: white;
+        color: #1f2937;
+        font-size: 0.75rem;
+        font-weight: 600;
+        padding: 0.25rem 0.625rem;
+        border-radius: 0.25rem;
+      }
+      .program-main-content {
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        position: relative;
+        z-index: 10;
+      }
+      .program-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #111827;
+        margin-bottom: 0.75rem;
+      }
+      .program-subtitle {
+        font-size: 0.875rem;
+        color: #374151;
+        margin-bottom: 0.75rem;
+      }
+      .program-features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+        font-size: 0.875rem;
+        color: #374151;
+      }
+      .program-feature {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .program-feature svg {
+        width: 1rem;
+        height: 1rem;
+      }
+      .enroll-button {
+        display: inline-block;
+        background: #16a34a;
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background 0.3s;
+      }
+      .enroll-button:hover {
+        background: #15803d;
+      }
+      .program-duration-badge {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        z-index: 10;
+        background: rgba(255,255,255,0.9);
+        color: #1f2937;
+        padding: 0.25rem 0.75rem;
+        border-radius: 0.25rem;
+        font-size: 0.875rem;
+        font-weight: bold;
+      }
+      .program-bg-image {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 12rem;
+        height: 12rem;
+        opacity: 0.2;
+        overflow: hidden;
+        border-radius: 0.5rem;
+      }
+      .program-bg-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .program-right {
+        background: white;
+        padding: 2rem;
+        border-left: 2px solid #e5e7eb;
+      }
+      .program-right h4 {
+        font-size: 1.125rem;
+        font-weight: bold;
+        color: #111827;
+        margin-bottom: 1rem;
+      }
+      .program-provider {
+        font-size: 0.875rem;
+        color: #4b5563;
+        margin-bottom: 0.5rem;
+      }
+      .status-badge {
+        display: inline-block;
+        background: #d1fae5;
+        color: #065f46;
+        font-size: 0.75rem;
+        font-weight: 600;
+        padding: 0.25rem 0.625rem;
+        border-radius: 0.25rem;
+        margin-bottom: 1rem;
+      }
+      .program-detail {
+        font-size: 0.875rem;
+        color: #374151;
+        margin-bottom: 0.5rem;
+      }
+      .program-detail span {
+        font-weight: 600;
+      }
+      .know-more-button {
+        display: block;
+        width: 100%;
+        background: #dc2626;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+        text-decoration: none;
+        font-weight: 600;
+        text-align: center;
+        transition: background 0.3s;
+        margin-top: 1rem;
+      }
+      .know-more-button:hover {
+        background: #b91c1c;
+      }
+      .no-programs {
+        text-align: center;
+        padding: 3rem;
+        color: #6b7280;
+        font-size: 1.125rem;
+      }
+      @media (max-width: 1024px) {
+        .program-content {
+          grid-template-columns: 1fr;
+        }
+        .program-right {
+          border-left: none;
+          border-top: 2px solid #e5e7eb;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-inner">
+        <a href="index.html" class="logo-link">
+          <img src="dtu-logo.png" alt="DTU Logo" class="logo-image" />
+          <span class="logo-text">DTU</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Breadcrumb -->
+      <section style="background: #f9fafb; padding: 1rem 0;">
+        <div style="max-width: 1280px; margin: 0 auto; padding: 0 1rem;">
+          <a href="index.html" style="color: #2563eb; font-weight: 600; text-decoration: none;">
+            ← Back to Homepage
+          </a>
+        </div>
+      </section>
+
+      <!-- Programmes Listing -->
+      <section style="padding: 3rem 1rem; background: white;">
+        <div style="max-width: 1280px; margin: 0 auto;">
+          <div class="filter-container">
+            <div class="programs-header">
+              <h1 class="programs-title">PROGRAMMES</h1>
+              <div>
+                <span class="programs-subtitle" id="programCount">All Programmes (4)</span>
+              </div>
+            </div>
+            <!-- Filter Toggle -->
+            <label class="filter-label">
+              <input
+                type="checkbox"
+                id="upcomingFilter"
+                class="filter-checkbox"
+              />
+              <span>Show only upcoming programs</span>
+            </label>
+          </div>
+
+          <!-- Programs List -->
+          <div id="programsList">
+            <!-- Programs will be inserted here by JavaScript -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2025 Delhi Technological University – Digital Education</p>
+    </footer>
+
+    <script>
+      // Program data with real start dates
+      const programs = [
+        {
+          id: 'ai',
+          title: 'Advanced Program in Artificial Intelligence',
+          subtitle: 'Master AI fundamentals and advanced techniques',
+          batch: 'Batch 01',
+          duration: '6 Months',
+          startDate: new Date('2026-03-28'), // March 28, 2026
+          cost: 'INR 1,50,000 + GST',
+          serviceProvider: 'DTU Centre for Executive Programmes',
+          link: 'program-ai.html'
+        },
+        {
+          id: 'data-science',
+          title: 'Advanced Certificate Program in Data Science and AI',
+          subtitle: 'Combine data science with AI to solve complex challenges',
+          batch: 'Batch 01',
+          duration: '6 Months',
+          startDate: new Date('2025-12-21'), // December 21, 2025
+          cost: 'Contact for pricing',
+          serviceProvider: 'DTU Centre for Executive Programmes',
+          link: 'program-data-science.html'
+        },
+        {
+          id: 'csr-esg',
+          title: 'Leadership Program in CSR, ESG and Corporate Sustainability',
+          subtitle: 'Drive sustainable business transformation',
+          batch: 'Batch 01',
+          duration: '6 Months',
+          startDate: new Date('2025-12-15'), // December 15, 2025 (past)
+          cost: 'Contact for pricing',
+          serviceProvider: 'DTU Centre for Executive Programmes',
+          link: 'program-csr-esg.html'
+        },
+        {
+          id: 'renewable-energy',
+          title: 'Advanced Program in Renewable and Sustainable Energy Management (APRSE 01)',
+          subtitle: 'Shape the future of sustainable energy',
+          batch: 'Batch 01',
+          duration: '6 Months',
+          startDate: new Date('2026-01-10'), // January 10, 2026
+          cost: 'Contact for pricing',
+          serviceProvider: 'DTU Centre for Executive Programmes',
+          link: 'program-renewable-energy.html'
+        }
+      ];
+
+      let showUpcomingOnly = false;
+
+      function formatDate(date) {
+        return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+      }
+
+      function isUpcoming(program) {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        const startDate = new Date(program.startDate);
+        startDate.setHours(0, 0, 0, 0);
+        return startDate >= today;
+      }
+
+      function renderPrograms() {
+        const filteredPrograms = showUpcomingOnly 
+          ? programs.filter(isUpcoming)
+          : programs;
+
+        const countText = showUpcomingOnly ? 'Upcoming Programme' : 'All Programmes';
+        document.getElementById('programCount').textContent = `${countText} (${filteredPrograms.length})`;
+
+        const container = document.getElementById('programsList');
+
+        if (filteredPrograms.length === 0) {
+          container.innerHTML = '<div class="no-programs">No programs found matching the selected filter.</div>';
+          return;
+        }
+
+        let html = '';
+        filteredPrograms.forEach(program => {
+          html += `
+            <div class="program-item">
+              <div class="program-content">
+                <div class="program-left">
+                  <div class="program-info-top">
+                    <span>DTU</span>
+                    <span>Delhi Technological University</span>
+                  </div>
+                  <div class="program-badge">${program.batch}</div>
+                  
+                  <div class="program-main-content">
+                    <h3 class="program-title">${program.title}</h3>
+                    ${program.subtitle ? `<p class="program-subtitle">${program.subtitle}</p>` : ''}
+                    
+                    <div class="program-features">
+                      <div class="program-feature">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <span>Duration: ${program.duration}</span>
+                      </div>
+                      <div class="program-feature">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        <span>Peer-to-Peer Learning</span>
+                      </div>
+                      <div class="program-feature">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                        </svg>
+                        <span>LIVE Sessions</span>
+                      </div>
+                      <div class="program-feature">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                        <span>Campus Immersion at DTU</span>
+                      </div>
+                    </div>
+
+                    <a href="${program.link}" class="enroll-button">Enroll Now</a>
+                  </div>
+
+                  <div class="program-duration-badge">${program.duration}</div>
+                  <div class="program-bg-image">
+                    <img src="campus-image.jpg" alt="DTU Campus" />
+                  </div>
+                </div>
+
+                <div class="program-right">
+                  <h4>${program.title}</h4>
+                  
+                  ${program.serviceProvider ? `
+                    <p class="program-provider">
+                      <span>Service Provider:</span> ${program.serviceProvider}
+                    </p>
+                  ` : ''}
+                  
+                  <div style="margin-bottom: 1rem;">
+                    <span class="status-badge">Status: Admissions Open</span>
+                  </div>
+
+                  <p class="program-detail">
+                    <span>Start Date:</span> ${formatDate(program.startDate)}
+                  </p>
+
+                  ${program.cost ? `
+                    <p class="program-detail">
+                      <span>Programme Fee:</span> ${program.cost}
+                    </p>
+                  ` : ''}
+
+                  <a href="${program.link}" class="know-more-button">Know More →</a>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+
+        container.innerHTML = html;
+      }
+
+      // Event listener for filter checkbox
+      document.getElementById('upcomingFilter').addEventListener('change', (e) => {
+        showUpcomingOnly = e.target.checked;
+        renderPrograms();
+      });
+
+      // Initial render
+      renderPrograms();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message from Vice Chancellor - DTU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-inner">
+        <a href="index.html" class="logo-link">
+          <img src="dtu-logo.png" alt="DTU Logo" class="logo-image" />
+          <span class="logo-text">DTU</span>
+        </a>
+        <div style="margin-left:auto; display:flex; align-items:center; gap:12px;">
+          <!-- Hamburger Menu Button -->
+          <button 
+            id="menuBtn"
+            class="flex flex-col justify-center items-center w-12 h-12 bg-gray-700 hover:bg-gray-600 rounded transition-colors relative z-50"
+            aria-label="Menu"
+          >
+            <span class="block w-6 h-0.5 bg-white mb-1.5"></span>
+            <span class="block w-6 h-0.5 bg-white mb-1.5"></span>
+            <span class="block w-6 h-0.5 bg-white"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Dropdown Menu Overlay -->
+    <div 
+      id="menuOverlay" 
+      class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity"
+    ></div>
+
+    <!-- Dropdown Menu -->
+    <div 
+      id="dropdownMenu" 
+      class="fixed top-20 right-0 w-80 bg-gradient-to-br from-gray-800 to-gray-900 shadow-2xl z-40 transform translate-x-full transition-transform duration-300 ease-in-out"
+      style="max-height: calc(100vh - 5rem); overflow-y: auto;"
+    >
+      <nav class="py-6 px-4">
+        <ul class="space-y-1">
+          <li>
+            <a 
+              href="about-ctel.html" 
+              class="block px-6 py-4 text-white text-lg hover:bg-white hover:bg-opacity-10 rounded transition-colors"
+            >
+              About CTEL
+            </a>
+          </li>
+          <li>
+            <a 
+              href="message-vc.html" 
+              class="block px-6 py-4 text-white text-lg hover:bg-white hover:bg-opacity-10 rounded transition-colors"
+            >
+              Message from Vice Chancellor
+            </a>
+          </li>
+          <li>
+            <a 
+              href="message-dean.html" 
+              class="block px-6 py-4 text-white text-lg hover:bg-white hover:bg-opacity-10 rounded transition-colors"
+            >
+              Message from Dean of Digital Education
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Page Title -->
+        <div class="text-center mb-12">
+            <div class="inline-block mb-4">
+                <svg class="w-16 h-16 text-gray-400 mx-auto" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                </svg>
+            </div>
+            <h1 class="text-4xl font-bold text-gray-900 mb-2">Prof. Prateek Sharma</h1>
+            <p class="text-xl text-gray-600">Vice Chancellor, Delhi Technological University</p>
+        </div>
+
+        <!-- Content Section -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 p-8 lg:p-12">
+                <!-- Image Column -->
+                <div class="lg:col-span-2">
+                    <div class="sticky top-24">
+                        <div class="rounded-lg overflow-hidden shadow-xl">
+                            <!-- REPLACE THIS src WITH YOUR ACTUAL IMAGE PATH -->
+                            <img 
+                                src="vc-image.jpg" 
+                                alt="Prof. Prateek Sharma" 
+                                class="w-full h-auto object-cover"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Column -->
+                <div class="lg:col-span-3">
+                    <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
+                        <p>
+                            Delhi Technological University (DTU), formerly Delhi College of Engineering, has a distinguished legacy of over 84 years in delivering high-quality education, pioneering research, and fostering innovation. As one of the country's premier institutions, DTU remains committed to producing competent, industry-ready professionals across diverse disciplines including engineering, technology, management, and finance. Our academic programs are designed to provide a strong foundation in core principles, complemented by hands-on projects, research opportunities, and holistic development initiatives that nurture both technical competence and leadership qualities.
+                        </p>
+
+                        <p>
+                            The University maintains strong linkages with industry and actively promotes collaborative initiatives that ensure our graduates are well-prepared to meet evolving professional challenges. Our distinguished faculty actively bridge the gap between academia and industry, engaging in collaborative research and practice.
+                        </p>
+
+                        <p>
+                            To our valued industry partners, I extend an invitation to collaborate with DTU's skilled and motivated student cohort. We are confident that our graduates will contribute meaningfully to your organizations, both in technical capability and professional conduct.
+                        </p>
+
+                        <p>
+                            To our students, I encourage you to make the most of the opportunities that come through the Department of T&P. I am sure that all of you will carry forward DTU's legacy with integrity, adaptability, and a deep sense of responsibility. Let your knowledge and values guide you in shaping a better future for yourself and for society.
+                        </p>
+
+                        <p>
+                            I commend the efforts of the Department of Training and Placement in strengthening industry-academia collaboration and in paving the way for our students' success. As we continue to grow and evolve together, I extend my best wishes to our students for success in all their future endeavours, and to our industry partners, I wish continued innovation and prosperity. May this collaboration between our young talent and industry partners lead to a brighter, stronger, and more sustainable future for all of us.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back Button -->
+        <div class="text-center mt-12">
+            <a href="index.html" class="inline-flex items-center px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                </svg>
+                Back to Home
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2025 Delhi Technological University – Digital Education</p>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        const menuOverlay = document.getElementById('menuOverlay');
+        let isOpen = false;
+
+        function toggleMenu() {
+            isOpen = !isOpen;
+            
+            if (isOpen) {
+                dropdownMenu.classList.remove('translate-x-full');
+                menuOverlay.classList.remove('hidden');
+            } else {
+                dropdownMenu.classList.add('translate-x-full');
+                menuOverlay.classList.add('hidden');
+            }
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        menuOverlay.addEventListener('click', toggleMenu);
+
+        // Close menu when clicking a link
+        dropdownMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (isOpen) toggleMenu();
+            });
+        });
+    </script>
+</body>
+</html>

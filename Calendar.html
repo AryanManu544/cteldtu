@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTU Calendar - Programme Schedule</title>
+    <link rel="icon" href="dtu-logo-removebg.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Tailwind is used only for the calendar layout below -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- Site Header -->
+    <header class="header">
+      <div class="header-inner">
+        <a href="index.html" class="logo-link">
+          <img src="dtu-logo.png" alt="DTU Logo" class="logo-image" />
+          <span class="logo-text">DTU</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <div class="py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-8 text-center">CALENDAR</h1>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Calendar Grid -->
+                <div class="lg:col-span-2">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <div class="flex items-center justify-between mb-6">
+                            <button id="prevMonth" class="p-2 hover:bg-gray-100 rounded-full">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                                </svg>
+                            </button>
+                            <h2 id="monthYear" class="text-xl font-bold text-gray-900"></h2>
+                            <button id="nextMonth" class="p-2 hover:bg-gray-100 rounded-full">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="grid grid-cols-7 gap-1 mb-2">
+                            <div class="text-center text-sm font-semibold text-gray-600 py-2">Sun</div>
+                            <div class="text-center text-sm font-semibold text-gray-600 py-2">Mon</div>
+                            <div class="text-center text-sm font-semibold text-gray-600 py-2">Tue</div>
+                            <div class="text-center text-sm font-semibold text-gray-600 py-2">Wed</div>
+                            <div class="text-center text-sm font-semibold text-gray-600 py-2">Thu</div>
+                            <div class="text-center text-sm font-semibold text-gray-600 py-2">Fri</div>
+                            <div class="text-center text-sm font-semibold text-gray-600 py-2">Sat</div>
+                        </div>
+
+                        <div id="calendarDays" class="grid grid-cols-7 gap-1">
+                            <!-- Days will be inserted here by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Events Sidebar -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 id="eventsTitle" class="text-xl font-bold text-gray-900 mb-4"></h3>
+                        <div id="eventsList" class="space-y-4">
+                            <!-- Events will be inserted here by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+        // Sample events data
+        const events = [
+            {
+                id: 1,
+                title: "Advanced Certificate Program in Data Science and AI",
+                startDate: new Date(2025, 11, 21), // December 21, 2025
+                endDate: new Date(2026, 5, 21),
+                status: "Upcoming",
+                link: "program-page.html"
+            },
+            {
+                id: 2,
+                title: "Leadership Program in CSR, ESG",
+                startDate: new Date(2025, 11, 15),
+                endDate: new Date(2026, 5, 15),
+                status: "Upcoming",
+                link: "program-page.html"
+            },
+            {
+                id: 3,
+                title: "Renewable Energy Management",
+                startDate: new Date(2026, 0, 10), // January 10, 2026
+                endDate: new Date(2026, 6, 10),
+                status: "Upcoming",
+                link: "program-page.html"
+            }
+        ];
+
+        let currentDate = new Date(2025, 11, 1); // December 2025
+        let selectedDate = new Date(2025, 11, 21);
+
+        const monthNames = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"];
+
+        function formatDate(date) {
+            const day = String(date.getDate()).padStart(2, '0');
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const year = date.getFullYear();
+            return `${day}/${month}/${year}`;
+        }
+
+        function getDaysInMonth(date) {
+            const year = date.getFullYear();
+            const month = date.getMonth();
+            const firstDay = new Date(year, month, 1);
+            const lastDay = new Date(year, month + 1, 0);
+            const daysInMonth = lastDay.getDate();
+            const startingDayOfWeek = firstDay.getDay();
+
+            const days = [];
+            for (let i = 0; i < startingDayOfWeek; i++) {
+                days.push(null);
+            }
+            for (let day = 1; day <= daysInMonth; day++) {
+                days.push(new Date(year, month, day));
+            }
+            return days;
+        }
+
+        function getEventForDate(date) {
+            if (!date) return null;
+            return events.find(event => 
+                date.getDate() === event.startDate.getDate() &&
+                date.getMonth() === event.startDate.getMonth() &&
+                date.getFullYear() === event.startDate.getFullYear()
+            );
+        }
+
+        function isSelectedDate(date) {
+            if (!date) return false;
+            return date.getDate() === selectedDate.getDate() &&
+                   date.getMonth() === selectedDate.getMonth() &&
+                   date.getFullYear() === selectedDate.getFullYear();
+        }
+
+        function renderCalendar() {
+            document.getElementById('monthYear').textContent = 
+                `${monthNames[currentDate.getMonth()]} ${currentDate.getFullYear()}`;
+            
+            const days = getDaysInMonth(currentDate);
+            const container = document.getElementById('calendarDays');
+            
+            let html = '';
+            days.forEach(date => {
+                const event = getEventForDate(date);
+                const isSelected = isSelectedDate(date);
+                
+                html += `
+                    <div class="min-h-[80px] border border-gray-200 p-1 ${
+                        isSelected ? 'bg-blue-100' : 'bg-white'
+                    } ${date ? 'hover:bg-gray-50 cursor-pointer' : ''}"
+                    ${date ? `onclick="selectDate(${date.getTime()})"` : ''}>
+                        ${date ? `
+                            <div class="text-sm font-medium text-gray-900 mb-1">${date.getDate()}</div>
+                            ${event ? `
+                                <div class="text-xs bg-blue-600 text-white p-1 rounded truncate">
+                                    ${event.title.substring(0, 15)}...
+                                </div>
+                            ` : ''}
+                        ` : ''}
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+            renderEvents();
+        }
+
+        function renderEvents() {
+            document.getElementById('eventsTitle').textContent = 
+                `${monthNames[currentDate.getMonth()]} Events`;
+            
+            const monthEvents = events.filter(event => 
+                event.startDate.getMonth() === currentDate.getMonth() &&
+                event.startDate.getFullYear() === currentDate.getFullYear()
+            );
+            
+            const container = document.getElementById('eventsList');
+            
+            if (monthEvents.length === 0) {
+                container.innerHTML = '<p class="text-sm text-gray-500 text-center py-4">No events this month</p>';
+                return;
+            }
+            
+            let html = '';
+            monthEvents.forEach(event => {
+                html += `
+                    <a href="${event.link}" class="block">
+                        <div class="border border-gray-200 rounded-lg p-4 hover:border-blue-500 transition-colors">
+                            <div class="flex items-start justify-between mb-2">
+                                <span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">
+                                    ${event.status}
+                                </span>
+                            </div>
+                            <h4 class="text-sm font-semibold text-gray-900 mb-2">${event.title}</h4>
+                            <p class="text-xs text-gray-600">
+                                Duration: ${formatDate(event.startDate)} - ${formatDate(event.endDate)}
+                            </p>
+                        </div>
+                    </a>
+                `;
+            });
+            
+            container.innerHTML = html;
+        }
+
+        function selectDate(timestamp) {
+            selectedDate = new Date(timestamp);
+            renderCalendar();
+        }
+
+        function navigateMonth(direction) {
+            currentDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + direction, 1);
+            renderCalendar();
+        }
+
+        document.getElementById('prevMonth').addEventListener('click', () => navigateMonth(-1));
+        document.getElementById('nextMonth').addEventListener('click', () => navigateMonth(1));
+
+        // Initial render
+        renderCalendar();
+    </script>
+
+    <footer class="footer">
+      <p>&copy; 2025 Delhi Technological University – Digital Education</p>
+    </footer>
+</body>
+</html>
