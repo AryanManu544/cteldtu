@@ -9,8 +9,350 @@
     body { 
       margin: 0; 
       padding: 0;
+      overflow-x: hidden;
+    }
+    
+    /* Desktop Navigation */
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-left: auto;
+    }
+    
+    /* Mobile Menu Button */
+    .mobile-menu-btn {
+      display: none;
+      margin-left: auto;
+      background: none;
+      border: none;
+      color: #fde047;
+      font-size: 28px;
+      cursor: pointer;
+      padding: 8px;
+      width: 40px;
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* Desktop Dropdowns */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-toggle {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    
+    .dropdown-arrow {
+      font-size: 10px;
+      transition: transform 0.2s;
+    }
+    
+    .dropdown.active .dropdown-arrow {
+      transform: rotate(180deg);
+    }
+    
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .desktop-nav {
+        display: none;
+      }
+      
+      .mobile-menu-btn {
+        display: flex;
+      }
     }
   </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+      const parentDoc = window.parent.document;
+      let mobileMenuOverlay = null;
+      let mobileMenu = null;
+      
+      // Create mobile menu in parent document
+      function createMobileMenu() {
+        // Create overlay
+        mobileMenuOverlay = parentDoc.createElement('div');
+        mobileMenuOverlay.id = 'mobile-menu-overlay-dtu';
+        mobileMenuOverlay.style.cssText = `
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0, 0, 0, 0.5);
+          z-index: 999998;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        `;
+        
+        // Create menu
+        mobileMenu = parentDoc.createElement('div');
+        mobileMenu.id = 'mobile-menu-dtu';
+        mobileMenu.style.cssText = `
+          position: fixed;
+          top: 0;
+          right: -100%;
+          width: 85%;
+          max-width: 400px;
+          height: 100vh;
+          background: linear-gradient(135deg, rgba(1, 70, 82, 0.98) 0%, rgba(1, 70, 82, 0.95) 100%);
+          backdrop-filter: blur(20px);
+          z-index: 999999;
+          padding: 80px 0 20px;
+          overflow-y: auto;
+          transition: right 0.3s ease;
+          box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
+        `;
+        
+        mobileMenu.innerHTML = `
+          <button id="mobile-close-btn-dtu" style="position: absolute; top: 20px; right: 20px; background: rgba(255, 255, 255, 0.1); border: none; color: #ffffff; font-size: 32px; cursor: pointer; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background 0.2s;">✕</button>
+          
+          <div style="border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+            <button class="mobile-menu-section-btn" data-section="about" style="display: flex; justify-content: space-between; align-items: center; width: 100%; background: none; border: none; color: #ffffff; padding: 18px 30px; font-size: 18px; font-weight: 500; cursor: pointer; text-align: left; transition: background 0.2s;">
+              <span>About</span>
+              <span class="mobile-menu-arrow" style="transition: transform 0.3s; font-size: 20px;">›</span>
+            </button>
+            <div class="mobile-submenu" data-submenu="about" style="max-height: 0; overflow: hidden; background: rgba(0, 0, 0, 0.2); transition: max-height 0.3s ease;">
+              <a href="about-ctel.html" style="display: block; color: #fde047; padding: 14px 30px 14px 50px; font-size: 16px; font-weight: 400; text-decoration: none; transition: background 0.2s, padding-left 0.2s;">About CTEL</a>
+              <a href="index.html" style="display: block; color: #fde047; padding: 14px 30px 14px 50px; font-size: 16px; font-weight: 400; text-decoration: none; transition: background 0.2s, padding-left 0.2s;">Message from Dean</a>
+              <a href="message-vc.html" style="display: block; color: #fde047; padding: 14px 30px 14px 50px; font-size: 16px; font-weight: 400; text-decoration: none; transition: background 0.2s, padding-left 0.2s;">Message from VC</a>
+            </div>
+          </div>
+
+          <div style="border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+            <button class="mobile-menu-section-btn" data-section="programs" style="display: flex; justify-content: space-between; align-items: center; width: 100%; background: none; border: none; color: #ffffff; padding: 18px 30px; font-size: 18px; font-weight: 500; cursor: pointer; text-align: left; transition: background 0.2s;">
+              <span>Programs</span>
+              <span class="mobile-menu-arrow" style="transition: transform 0.3s; font-size: 20px;">›</span>
+            </button>
+            <div class="mobile-submenu" data-submenu="programs" style="max-height: 0; overflow: hidden; background: rgba(0, 0, 0, 0.2); transition: max-height 0.3s ease;">
+              <a href="index.html#certificate-programs" style="display: block; color: #fde047; padding: 14px 30px 14px 50px; font-size: 16px; font-weight: 400; text-decoration: none; transition: background 0.2s, padding-left 0.2s;">Certificate Programs</a>
+              <a href="index.html#diploma-programs" style="display: block; color: #fde047; padding: 14px 30px 14px 50px; font-size: 16px; font-weight: 400; text-decoration: none; transition: background 0.2s, padding-left 0.2s;">Diploma Programs</a>
+              <a href="index.html#degree-programs" style="display: block; color: #fde047; padding: 14px 30px 14px 50px; font-size: 16px; font-weight: 400; text-decoration: none; transition: background 0.2s, padding-left 0.2s;">Degree Programs</a>
+            </div>
+          </div>
+
+          <div style="border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+            <a href="index.html#calendar" style="display: block; color: #ffffff; padding: 18px 30px; font-size: 18px; font-weight: 500; text-decoration: none; transition: background 0.2s, padding-left 0.2s;">Calendar</a>
+          </div>
+        `;
+        
+        parentDoc.body.appendChild(mobileMenuOverlay);
+        parentDoc.body.appendChild(mobileMenu);
+        
+        // Add event listeners
+        const closeBtn = parentDoc.getElementById('mobile-close-btn-dtu');
+        closeBtn.addEventListener('click', closeMobileMenu);
+        closeBtn.addEventListener('mouseenter', function() {
+          this.style.background = 'rgba(255, 255, 255, 0.2)';
+        });
+        closeBtn.addEventListener('mouseleave', function() {
+          this.style.background = 'rgba(255, 255, 255, 0.1)';
+        });
+        
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+        
+        // Section buttons
+        const sectionBtns = mobileMenu.querySelectorAll('.mobile-menu-section-btn');
+        sectionBtns.forEach(btn => {
+          btn.addEventListener('click', function() {
+            const sectionName = this.dataset.section;
+            const submenu = mobileMenu.querySelector(`[data-submenu="${sectionName}"]`);
+            const arrow = this.querySelector('.mobile-menu-arrow');
+            
+            if (submenu.style.maxHeight === '0px' || !submenu.style.maxHeight) {
+              submenu.style.maxHeight = '500px';
+              arrow.style.transform = 'rotate(90deg)';
+            } else {
+              submenu.style.maxHeight = '0px';
+              arrow.style.transform = 'rotate(0deg)';
+            }
+          });
+          
+          btn.addEventListener('mouseenter', function() {
+            this.style.background = 'rgba(255, 255, 255, 0.1)';
+          });
+          btn.addEventListener('mouseleave', function() {
+            this.style.background = 'none';
+          });
+        });
+        
+        // Submenu links
+        const submenuLinks = mobileMenu.querySelectorAll('.mobile-submenu a');
+        submenuLinks.forEach(link => {
+          link.addEventListener('click', closeMobileMenu);
+          link.addEventListener('mouseenter', function() {
+            this.style.background = 'rgba(255, 255, 255, 0.1)';
+            this.style.paddingLeft = '60px';
+          });
+          link.addEventListener('mouseleave', function() {
+            this.style.background = 'rgba(0, 0, 0, 0.2)';
+            this.style.paddingLeft = '50px';
+          });
+        });
+        
+        // Calendar link
+        const calendarLink = mobileMenu.querySelector('a[href*="calendar"]');
+        if (calendarLink) {
+          calendarLink.addEventListener('click', closeMobileMenu);
+          calendarLink.addEventListener('mouseenter', function() {
+            this.style.background = 'rgba(255, 255, 255, 0.1)';
+            this.style.paddingLeft = '40px';
+          });
+          calendarLink.addEventListener('mouseleave', function() {
+            this.style.background = 'none';
+            this.style.paddingLeft = '30px';
+          });
+        }
+      }
+      
+      function openMobileMenu() {
+        if (!mobileMenu) {
+          createMobileMenu();
+        }
+        
+        mobileMenuOverlay.style.display = 'block';
+        setTimeout(() => {
+          mobileMenuOverlay.style.opacity = '1';
+          mobileMenu.style.right = '0';
+        }, 10);
+        
+        parentDoc.body.style.overflow = 'hidden';
+      }
+      
+      function closeMobileMenu() {
+        if (mobileMenu && mobileMenuOverlay) {
+          mobileMenuOverlay.style.opacity = '0';
+          mobileMenu.style.right = '-100%';
+          setTimeout(() => {
+            mobileMenuOverlay.style.display = 'none';
+          }, 300);
+          parentDoc.body.style.overflow = '';
+        }
+      }
+      
+      // Mobile menu button
+      if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          openMobileMenu();
+        });
+      }
+      
+      // Desktop dropdowns (only on desktop)
+      if (window.innerWidth > 768) {
+        const dropdowns = document.querySelectorAll('.dropdown');
+        let activeDropdown = null;
+        let hideTimeout = null;
+        
+        dropdowns.forEach((dropdown) => {
+          const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
+          const dropdownType = dropdown.dataset.type;
+          let dropdownElement = null;
+          
+          function createDropdown() {
+            dropdownElement = parentDoc.createElement('div');
+            dropdownElement.id = `dropdown-menu-overlay-${dropdownType}`;
+            dropdownElement.style.cssText = `
+              display: none;
+              position: fixed;
+              background-color: #014652;
+              backdrop-filter: blur(10px);
+              min-width: 220px;
+              box-shadow: 0px 8px 24px 0px rgba(0,0,0,0.4);
+              z-index: 999999;
+              border-radius: 8px;
+              border: 1px solid rgba(255, 255, 255, 0.1);
+            `;
+            
+            let dropdownHTML = '';
+            if (dropdownType === 'programs') {
+              dropdownHTML = `
+                <a href="index.html#certificate-programs" style="color: #fde047; padding: 14px 20px; text-decoration: none; display: block; font-size: 14px; font-weight: 600; transition: background-color 0.2s, color 0.2s; white-space: nowrap; border-radius: 8px 8px 0 0;">Certificate Programs</a>
+                <a href="index.html#diploma-programs" style="color: #fde047; padding: 14px 20px; text-decoration: none; display: block; font-size: 14px; font-weight: 600; transition: background-color 0.2s, color 0.2s; white-space: nowrap;">Diploma Programs</a>
+                <a href="index.html#degree-programs" style="color: #fde047; padding: 14px 20px; text-decoration: none; display: block; font-size: 14px; font-weight: 600; transition: background-color 0.2s, color 0.2s; white-space: nowrap; border-radius: 0 0 8px 8px;">Degree Programs</a>
+              `;
+            } else if (dropdownType === 'about') {
+              dropdownHTML = `
+                <a href="about-ctel.html" style="color: #fde047; padding: 14px 20px; text-decoration: none; display: block; font-size: 14px; font-weight: 600; transition: background-color 0.2s, color 0.2s; white-space: nowrap; border-radius: 8px 8px 0 0;">About CTEL</a>
+                <a href="index.html" style="color: #fde047; padding: 14px 20px; text-decoration: none; display: block; font-size: 14px; font-weight: 600; transition: background-color 0.2s, color 0.2s; white-space: nowrap;">Message from Dean</a>
+                <a href="message-vc.html" style="color: #fde047; padding: 14px 20px; text-decoration: none; display: block; font-size: 14px; font-weight: 600; transition: background-color 0.2s, color 0.2s; white-space: nowrap; border-radius: 0 0 8px 8px;">Message from VC</a>
+              `;
+            }
+            
+            dropdownElement.innerHTML = dropdownHTML;
+            
+            const links = dropdownElement.querySelectorAll('a');
+            links.forEach(link => {
+              link.addEventListener('mouseenter', function() {
+                this.style.backgroundColor = '#025f6d';
+                this.style.color = '#ffffff';
+              });
+              link.addEventListener('mouseleave', function() {
+                this.style.backgroundColor = '';
+                this.style.color = '#fde047';
+              });
+            });
+            
+            parentDoc.body.appendChild(dropdownElement);
+            
+            dropdownElement.addEventListener('mouseenter', function() {
+              clearTimeout(hideTimeout);
+            });
+            
+            dropdownElement.addEventListener('mouseleave', function() {
+              hideDropdown();
+            });
+          }
+          
+          function showDropdown() {
+            if (activeDropdown && activeDropdown !== dropdownElement) {
+              activeDropdown.style.display = 'none';
+            }
+            
+            if (!dropdownElement) {
+              createDropdown();
+            }
+            
+            clearTimeout(hideTimeout);
+            
+            const rect = dropdownToggle.getBoundingClientRect();
+            const iframe = window.frameElement;
+            const iframeRect = iframe ? iframe.getBoundingClientRect() : {left: 0, top: 0};
+            
+            dropdownElement.style.left = (iframeRect.left + rect.left + rect.width / 2 - 110) + 'px';
+            dropdownElement.style.top = (iframeRect.top + rect.bottom + 8) + 'px';
+            dropdownElement.style.display = 'block';
+            dropdown.classList.add('active');
+            activeDropdown = dropdownElement;
+          }
+          
+          function hideDropdown() {
+            hideTimeout = setTimeout(() => {
+              if (dropdownElement) {
+                dropdownElement.style.display = 'none';
+                dropdown.classList.remove('active');
+                if (activeDropdown === dropdownElement) {
+                  activeDropdown = null;
+                }
+              }
+            }, 100);
+          }
+          
+          dropdown.addEventListener('mouseenter', showDropdown);
+          dropdown.addEventListener('mouseleave', hideDropdown);
+        });
+      }
+    });
+  </script>
 </head>
 <body>
   <!-- Header -->
@@ -21,17 +363,31 @@
         <span class="logo-text" style="color: #ffffff;">Delhi Technological University</span>
       </a>
 
-      <nav style="display: flex; align-items: center; gap: 16px; margin-left: auto;">
-        <a href="about-ctel.html" target="_parent" class="text-yellow-300 hover:text-white" style="padding: 8px 12px; font-size: 14px; font-weight: 600; transition: color 0.2s; white-space: nowrap;">
-          About
-        </a>
-        <a href="index.html#programmes" target="_parent" class="text-yellow-300 hover:text-white" style="padding: 8px 12px; font-size: 14px; font-weight: 600; transition: color 0.2s; white-space: nowrap;">
-          Programs
-        </a>
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav">
+        <!-- About Dropdown -->
+        <div class="dropdown" data-type="about">
+          <span class="dropdown-toggle text-yellow-300 hover:text-white" style="padding: 8px 12px; font-size: 14px; font-weight: 600; transition: color 0.2s; white-space: nowrap;">
+            About
+            <span class="dropdown-arrow">▼</span>
+          </span>
+        </div>
+        
+        <!-- Programs Dropdown -->
+        <div class="dropdown" data-type="programs">
+          <span class="dropdown-toggle text-yellow-300 hover:text-white" style="padding: 8px 12px; font-size: 14px; font-weight: 600; transition: color 0.2s; white-space: nowrap;">
+            Programs
+            <span class="dropdown-arrow">▼</span>
+          </span>
+        </div>
+        
         <a href="index.html#calendar" target="_parent" class="text-yellow-300 hover:text-white" style="padding: 8px 12px; font-size: 14px; font-weight: 600; transition: color 0.2s; white-space: nowrap;">
           Calendar
         </a>
       </nav>
+
+      <!-- Mobile Menu Button (Hamburger) -->
+      <button class="mobile-menu-btn">☰</button>
     </div>
   </header>
 </body>
