@@ -1,108 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DTU Header</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { 
+      margin: 0; 
+      padding: 0;
+    }
+  </style>
 </head>
 <body>
-    <header class="bg-white shadow-sm sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <!-- Logo -->
-                <a href="index.html" class="flex items-center space-x-3 hover:opacity-80 transition-opacity cursor-pointer">
-                    <img 
-                        src="/dtu-logo.png" 
-                        alt="Delhi Technological University" 
-                        class="h-20 w-20 object-contain"
-                    />
-                    <span class="text-xl font-semibold text-gray-800 hidden sm:inline">DTU</span>
-                </a>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link" target="_parent">
+        <img src="images/logos/dtu_logo.png" alt="DTU Logo" class="logo-image" />
+        <span class="logo-text" style="color: #ffffff;">Delhi Technological University</span>
+      </a>
 
-                <!-- Hamburger Menu Button -->
-                <button 
-                    id="menuBtn"
-                    class="flex flex-col justify-center items-center w-12 h-12 bg-gray-700 hover:bg-gray-600 rounded transition-colors relative z-50"
-                    aria-label="Menu"
-                >
-                    <span class="block w-6 h-0.5 bg-white mb-1.5"></span>
-                    <span class="block w-6 h-0.5 bg-white mb-1.5"></span>
-                    <span class="block w-6 h-0.5 bg-white"></span>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <!-- Dropdown Menu Overlay -->
-    <div 
-        id="menuOverlay" 
-        class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity"
-    ></div>
-
-    <!-- Dropdown Menu -->
-    <div 
-        id="dropdownMenu" 
-        class="fixed top-20 right-0 w-80 bg-gradient-to-br from-gray-800 to-gray-900 shadow-2xl z-40 transform translate-x-full transition-transform duration-300 ease-in-out"
-        style="max-height: calc(100vh - 5rem); overflow-y: auto;"
-    >
-        <nav class="py-6 px-4">
-            <ul class="space-y-1">
-                <li>
-                    <a 
-                        href="#about-ctel" 
-                        class="block px-6 py-4 text-white text-lg hover:bg-white hover:bg-opacity-10 rounded transition-colors"
-                    >
-                        About CTEL
-                    </a>
-                </li>
-                <li>
-                    <a 
-                        href="#message-vc" 
-                        class="block px-6 py-4 text-white text-lg hover:bg-white hover:bg-opacity-10 rounded transition-colors"
-                    >
-                        Message from Vice Chancellor
-                    </a>
-                </li>
-                <li>
-                    <a 
-                        href="#message-dean" 
-                        class="block px-6 py-4 text-white text-lg hover:bg-white hover:bg-opacity-10 rounded transition-colors"
-                    >
-                        Message from Dean of Digital Education
-                    </a>
-                </li>
-            </ul>
-        </nav>
+      <nav style="display: flex; align-items: center; gap: 16px; margin-left: auto;">
+        <a href="about-ctel.html" target="_parent" class="text-yellow-300 hover:text-white" style="padding: 8px 12px; font-size: 14px; font-weight: 600; transition: color 0.2s; white-space: nowrap;">
+          About
+        </a>
+        <a href="index.html#programmes" target="_parent" class="text-yellow-300 hover:text-white" style="padding: 8px 12px; font-size: 14px; font-weight: 600; transition: color 0.2s; white-space: nowrap;">
+          Programs
+        </a>
+        <a href="index.html#calendar" target="_parent" class="text-yellow-300 hover:text-white" style="padding: 8px 12px; font-size: 14px; font-weight: 600; transition: color 0.2s; white-space: nowrap;">
+          Calendar
+        </a>
+      </nav>
     </div>
-
-    <script>
-        const menuBtn = document.getElementById('menuBtn');
-        const dropdownMenu = document.getElementById('dropdownMenu');
-        const menuOverlay = document.getElementById('menuOverlay');
-        let isOpen = false;
-
-        function toggleMenu() {
-            isOpen = !isOpen;
-            
-            if (isOpen) {
-                dropdownMenu.classList.remove('translate-x-full');
-                menuOverlay.classList.remove('hidden');
-            } else {
-                dropdownMenu.classList.add('translate-x-full');
-                menuOverlay.classList.add('hidden');
-            }
-        }
-
-        menuBtn.addEventListener('click', toggleMenu);
-        menuOverlay.addEventListener('click', toggleMenu);
-
-        // Close menu when clicking a link
-        dropdownMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (isOpen) toggleMenu();
-            });
-        });
-    </script>
+  </header>
 </body>
 </html>
