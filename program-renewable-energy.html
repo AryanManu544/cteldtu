@@ -1,231 +1,1200 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Advanced Program in Renewable and Sustainable Energy Management - DTU" />
-    <link rel="icon" href="dtu-logo-removebg.png" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Renewable Energy Programme - DTU</title>
-    <style>
-      .program-section {
-        background: white;
-        border-radius: 0.5rem;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        padding: 2rem;
-        margin-bottom: 2rem;
-      }
-      .program-section h2 {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #111827;
-        margin-bottom: 1.5rem;
-      }
-      .feature-item {
-        display: flex;
-        align-items: start;
-        gap: 0.75rem;
-        margin-bottom: 1rem;
-      }
-      .feature-icon {
-        font-size: 1.5rem;
-      }
-      .feature-text {
-        color: #374151;
-      }
-      .outcome-item {
-        display: flex;
-        align-items: start;
-        gap: 0.75rem;
-        margin-bottom: 0.75rem;
-      }
-      .outcome-check {
-        color: #2563eb;
-        margin-top: 0.25rem;
-      }
-      .curriculum-item {
-        display: flex;
-        align-items: start;
-        gap: 0.75rem;
-        margin-bottom: 0.75rem;
-      }
-      .curriculum-number {
-        color: #2563eb;
-        font-weight: 600;
-        margin-top: 0.25rem;
-      }
-      .cta-section {
-        background: #2563eb;
-        border-radius: 0.5rem;
-        padding: 2rem;
-        text-align: center;
-        color: white;
-      }
-      .cta-button {
-        background: white;
-        color: #2563eb;
-        font-weight: 600;
-        padding: 0.75rem 2rem;
-        border-radius: 0.5rem;
-        text-decoration: none;
-        display: inline-block;
-        transition: background 0.3s;
-      }
-      .cta-button:hover {
-        background: #f3f4f6;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Header -->
-    <iframe id="header-frame" src="header.html" scrolling="no"></iframe>
 
-    <main>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Senior Management Program in Renewable Energy Strategy and Sustainable Leadership - DTU" />
+  <link rel="icon" href="dtu-logo-removebg.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Renewable Energy & Sustainability Programme - DTU</title>
+  <style>
+    .bg-white {
+      background-color: white;
+    }
+
+    .bg-gray-50 {
+      background-color: #f9fafb;
+    }
+
+    .bg-gray-100 {
+      background-color: #f3f4f6;
+    }
+
+    .bg-gray-200 {
+      background-color: #e5e7eb;
+    }
+
+    .bg-blue-50 {
+      background-color: #eff6ff;
+    }
+
+    .bg-blue-100 {
+      background-color: #dbeafe;
+    }
+
+    .bg-blue-800 {
+      background-color: #1e40af;
+    }
+
+    .bg-blue-900 {
+      background-color: #1e3a8a;
+    }
+
+    .bg-red-600 {
+      background-color: #dc2626;
+    }
+
+    .bg-green-600 {
+      background-color: #16a34a;
+    }
+
+    .bg-yellow-500 {
+      background-color: #eab308;
+    }
+
+    .bg-purple-900 {
+      background-color: #581c87;
+    }
+
+    .bg-gradient {
+      background: linear-gradient(to bottom right, #eff6ff, #f9fafb);
+    }
+
+    .text-white {
+      color: white;
+    }
+
+    .text-blue-100 {
+      color: #dbeafe;
+    }
+
+    .text-blue-600 {
+      color: #2563eb;
+    }
+
+    .text-blue-800 {
+      color: #1e40af;
+    }
+
+    .text-gray-500 {
+      color: #6b7280;
+    }
+
+    .text-gray-600 {
+      color: #4b5563;
+    }
+
+    .text-gray-700 {
+      color: #374151;
+    }
+
+    .text-gray-900 {
+      color: #111827;
+    }
+
+    .text-red-600 {
+      color: #dc2626;
+    }
+
+    .text-green-600 {
+      color: #16a34a;
+    }
+
+    .text-yellow-500 {
+      color: #eab308;
+    }
+
+    .text-purple-900 {
+      color: #581c87;
+    }
+
+    .border {
+      border: 1px solid #e5e7eb;
+    }
+
+    .border-gray-200 {
+      border-color: #e5e7eb;
+    }
+
+    .border-t {
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .border-2 {
+      border-width: 2px;
+    }
+
+    .border-gray-300 {
+      border-color: #d1d5db;
+    }
+
+    .border-gray-400 {
+      border-color: #9ca3af;
+    }
+
+    .rounded {
+      border-radius: 0.25rem;
+    }
+
+    .rounded-lg {
+      border-radius: 0.5rem;
+    }
+
+    .rounded-full {
+      border-radius: 9999px;
+    }
+
+    .p-4 {
+      padding: 1rem;
+    }
+
+    .p-6 {
+      padding: 1.5rem;
+    }
+
+    .p-8 {
+      padding: 2rem;
+    }
+
+    .px-2 {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+
+    .px-4 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .py-1 {
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+    }
+
+    .py-2 {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .py-3 {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+
+    .py-4 {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .py-6 {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .py-8 {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .pt-4 {
+      padding-top: 1rem;
+    }
+
+    .pb-4 {
+      padding-bottom: 1rem;
+    }
+
+    .m-0 {
+      margin: 0;
+    }
+
+    .mb-1 {
+      margin-bottom: 0.25rem;
+    }
+
+    .mb-2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .mb-4 {
+      margin-bottom: 1rem;
+    }
+
+    .mb-6 {
+      margin-bottom: 1.5rem;
+    }
+
+    .mt-2 {
+      margin-top: 0.5rem;
+    }
+
+    .mt-4 {
+      margin-top: 1rem;
+    }
+
+    .mt-6 {
+      margin-top: 1.5rem;
+    }
+
+    .mr-2 {
+      margin-right: 0.5rem;
+    }
+
+    .ml-2 {
+      margin-left: 0.5rem;
+    }
+
+    .max-w-7xl {
+      max-width: 80rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .min-h-screen {
+      min-height: 100vh;
+    }
+
+    .grid {
+      display: grid;
+    }
+
+    .grid-cols-1 {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .gap-3 {
+      gap: 0.75rem;
+    }
+
+    .gap-4 {
+      gap: 1rem;
+    }
+
+    .gap-6 {
+      gap: 1.5rem;
+    }
+
+    .gap-8 {
+      gap: 2rem;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .flex-wrap {
+      flex-wrap: wrap;
+    }
+
+    .flex-1 {
+      flex: 1 1 0%;
+    }
+
+    .items-center {
+      align-items: center;
+    }
+
+    .items-start {
+      align-items: flex-start;
+    }
+
+    .justify-between {
+      justify-content: space-between;
+    }
+
+    .space-x-2>*+* {
+      margin-left: 0.5rem;
+    }
+
+    .space-x-3>*+* {
+      margin-left: 0.75rem;
+    }
+
+    .space-x-4>*+* {
+      margin-left: 1rem;
+    }
+
+    .space-y-1>*+* {
+      margin-top: 0.25rem;
+    }
+
+    .space-y-2>*+* {
+      margin-top: 0.5rem;
+    }
+
+    .space-y-3>*+* {
+      margin-top: 0.75rem;
+    }
+
+    .space-y-8>*+* {
+      margin-top: 2rem;
+    }
+
+    .font-semibold {
+      font-weight: 600;
+    }
+
+    .font-bold {
+      font-weight: 700;
+    }
+
+    .text-xs {
+      font-size: 0.75rem;
+      line-height: 1rem;
+    }
+
+    .text-sm {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+
+    .text-lg {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+
+    .text-xl {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+
+    .text-2xl {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    .leading-relaxed {
+      line-height: 1.625;
+    }
+
+    .shadow-sm {
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    .sticky {
+      position: sticky;
+    }
+
+    .top-4 {
+      top: 1rem;
+    }
+
+    .overflow-hidden {
+      overflow: hidden;
+    }
+
+    .overflow-x-auto {
+      overflow-x: auto;
+    }
+
+    .w-5 {
+      width: 1.25rem;
+    }
+
+    .w-6 {
+      width: 1.5rem;
+    }
+
+    .w-16 {
+      width: 4rem;
+    }
+
+    .w-20 {
+      width: 5rem;
+    }
+
+    .w-full {
+      width: 100%;
+    }
+
+    .h-5 {
+      height: 1.25rem;
+    }
+
+    .h-6 {
+      height: 1.5rem;
+    }
+
+    .h-16 {
+      height: 4rem;
+    }
+
+    .h-20 {
+      height: 5rem;
+    }
+
+    .h-48 {
+      height: 12rem;
+    }
+
+    .h-full {
+      height: 100%;
+    }
+
+    .object-cover {
+      object-fit: cover;
+    }
+
+    .cursor-pointer {
+      cursor: pointer;
+    }
+
+    .transition-all {
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+
+    .transition-colors {
+      transition-property: color, background-color, border-color;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+
+    .transition-shadow {
+      transition-property: box-shadow;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+
+    .hover\:bg-gray-50:hover {
+      background-color: #f9fafb;
+    }
+
+    .hover\:bg-blue-800:hover {
+      background-color: #1e40af;
+    }
+
+    .hover\:bg-yellow-600:hover {
+      background-color: #ca8a04;
+    }
+
+    .hover\:text-blue-800:hover {
+      color: #1e40af;
+    }
+
+    .hover\:shadow-md:hover {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    .module-button {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      text-align: left;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: inherit;
+    }
+
+    .module-button:hover {
+      background-color: #f9fafb;
+    }
+
+    .module-content {
+      display: none;
+      padding: 1rem;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .module-content.expanded {
+      display: block;
+    }
+
+    .chevron {
+      width: 1.25rem;
+      height: 1.25rem;
+      color: #4b5563;
+      transform: rotate(0deg);
+      transition: transform 0.3s;
+    }
+
+    .chevron.rotated {
+      transform: rotate(180deg);
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border: 1px solid #e5e7eb;
+      padding: 0.5rem 1rem;
+      text-align: left;
+    }
+
+    thead {
+      background-color: #f9fafb;
+    }
+
+    @media (min-width: 768px) {
+      .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .lg\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .lg\:col-span-1 {
+        grid-column: span 1 / span 1;
+      }
+
+      .lg\:col-span-2 {
+        grid-column: span 2 / span 2;
+      }
+    }
+
+    .list-disc {
+      list-style-type: disc;
+    }
+
+    .list-inside {
+      list-style-position: inside;
+    }
+
+    .inline-block {
+      display: inline-block;
+    }
+
+    .text-left {
+      text-align: left;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .text-right {
+      text-align: right;
+    }
+
+    .flex-shrink-0 {
+      flex-shrink: 0;
+    }
+
+    .last\:mb-0:last-child {
+      margin-bottom: 0;
+    }
+
+    .faculty-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .faculty-avatar {
+      width: 4.5rem;
+      height: 4.5rem;
+      border-radius: 9999px;
+      background-color: #e5e7eb;
+      flex-shrink: 0;
+    }
+
+    .faculty-info h3 {
+      margin: 0 0 0.25rem;
+      font-weight: 700;
+      color: #111827;
+    }
+
+    .faculty-info p {
+      margin: 0 0 0.125rem;
+      font-size: 0.875rem;
+      color: #4b5563;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <iframe id="header-frame" src="header.html" scrolling="no"></iframe>
+
+  <main>
+    <div class="bg-white min-h-screen">
       <!-- Breadcrumb -->
-      <section style="background: #f9fafb; padding: 1rem 0;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 1rem;">
-          <a href="index.html" style="color: #2563eb; font-weight: 600; text-decoration: none;">
+      <nav class="bg-gray-50 py-4">
+        <div class="max-w-7xl px-4">
+          <a href="index.html" class="text-blue-600 hover:text-blue-800 font-semibold text-sm">
             ← Back to Homepage
           </a>
         </div>
-      </section>
+      </nav>
 
-      <!-- Program Content -->
-      <section style="padding: 2rem 1rem; background: #f9fafb;">
-        <div style="max-width: 1280px; margin: 0 auto;">
-          
-          <!-- Program Header -->
-          <div class="program-section">
-            <div style="margin-bottom: 1rem;">
-              <span style="display: inline-block; background: #dbeafe; color: #1e40af; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.625rem; border-radius: 0.25rem;">
-                Batch 01
-              </span>
+      <!-- Header Section -->
+      <div class="bg-green-600 text-white py-6">
+        <div class="max-w-7xl px-4">
+          <div class="flex items-center justify-between">
+            <div class="flex-1">
+              <h1 class="text-2xl font-bold mb-2">Senior Management Program in Renewable Energy Strategy and Sustainable Leadership</h1>
+              <p class="text-blue-100 text-sm">Strategic energy management and sustainable leadership for the future</p>
             </div>
-            <h1 style="font-size: 2.25rem; font-weight: bold; color: #111827; margin-bottom: 1rem;">
-              Advanced Program in Renewable and Sustainable Energy Management (APRSE 01)
-            </h1>
-            <p style="font-size: 1.125rem; color: #4b5563; margin-bottom: 1.5rem;">
-              Comprehensive program covering renewable energy technologies, sustainable energy management, and policy frameworks for a sustainable future.
-            </p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
-              <div>
-                <span style="font-size: 0.875rem; color: #6b7280;">Duration</span>
-                <p style="font-size: 1.125rem; font-weight: 600; color: #111827;">6 Months</p>
-              </div>
-              <div>
-                <span style="font-size: 0.875rem; color: #6b7280;">Provider</span>
-                <p style="font-size: 1.125rem; font-weight: 600; color: #111827;">Offered by DTU Centre for Executive Programmes</p>
-              </div>
-              <div>
-                <span style="font-size: 0.875rem; color: #6b7280;">Cost</span>
-                <p style="font-size: 1.125rem; font-weight: 600; color: #111827;">Contact for pricing</p>
-              </div>
+            <div class="bg-red-600 px-4 py-2 rounded">
+              <span class="text-sm font-semibold">Offered by DTU</span>
             </div>
-          </div>
-
-          <!-- Features -->
-          <div class="program-section">
-            <h2>Key Features</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
-              <div class="feature-item">
-                <span class="feature-icon">☀️</span>
-                <span class="feature-text">Solar and Wind Energy Systems</span>
-              </div>
-              <div class="feature-item">
-                <span class="feature-icon">⚡</span>
-                <span class="feature-text">Energy Storage Solutions</span>
-              </div>
-              <div class="feature-item">
-                <span class="feature-icon">📋</span>
-                <span class="feature-text">Energy Policy and Regulations</span>
-              </div>
-              <div class="feature-item">
-                <span class="feature-icon">🌍</span>
-                <span class="feature-text">Sustainable Energy Management</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Learning Outcomes -->
-          <div class="program-section">
-            <h2>Learning Outcomes</h2>
-            <div style="max-width: none;">
-              <div class="outcome-item">
-                <span class="outcome-check">✓</span>
-                <span class="feature-text">Understand renewable energy technologies and systems</span>
-              </div>
-              <div class="outcome-item">
-                <span class="outcome-check">✓</span>
-                <span class="feature-text">Design and implement sustainable energy solutions</span>
-              </div>
-              <div class="outcome-item">
-                <span class="outcome-check">✓</span>
-                <span class="feature-text">Navigate energy policies and regulatory frameworks</span>
-              </div>
-              <div class="outcome-item">
-                <span class="outcome-check">✓</span>
-                <span class="feature-text">Manage energy projects and assess their impact</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Curriculum -->
-          <div class="program-section">
-            <h2>Curriculum</h2>
-            <div style="max-width: none;">
-              <div class="curriculum-item">
-                <span class="curriculum-number">1.</span>
-                <span class="feature-text">Fundamentals of Renewable Energy</span>
-              </div>
-              <div class="curriculum-item">
-                <span class="curriculum-number">2.</span>
-                <span class="feature-text">Solar Energy Systems and Technologies</span>
-              </div>
-              <div class="curriculum-item">
-                <span class="curriculum-number">3.</span>
-                <span class="feature-text">Wind Energy and Other Renewable Sources</span>
-              </div>
-              <div class="curriculum-item">
-                <span class="curriculum-number">4.</span>
-                <span class="feature-text">Energy Storage and Grid Integration</span>
-              </div>
-              <div class="curriculum-item">
-                <span class="curriculum-number">5.</span>
-                <span class="feature-text">Energy Policy and Regulatory Framework</span>
-              </div>
-              <div class="curriculum-item">
-                <span class="curriculum-number">6.</span>
-                <span class="feature-text">Sustainable Energy Management</span>
-              </div>
-              <div class="curriculum-item">
-                <span class="curriculum-number">7.</span>
-                <span class="feature-text">Energy Project Planning and Implementation</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Eligibility -->
-          <div class="program-section">
-            <h2>Eligibility</h2>
-            <p class="feature-text">
-              Bachelor's degree in Engineering, Science, or related fields. Professionals working in energy sector preferred
-            </p>
-          </div>
-
-          <!-- CTA -->
-          <div class="cta-section">
-            <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">Ready to Get Started?</h3>
-            <p style="color: #dbeafe; margin-bottom: 1.5rem;">Join this program and advance your career</p>
-            <a href="https://saarthi.dtu.ac.in/digi_edu/sourceCode/index.php" class="cta-button">Apply Now</a>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
 
-    <footer class="footer">
-      <p>&copy; 2025 Delhi Technological University – Digital Education</p>
-    </footer>
-  </body>
+      <div class="max-w-7xl px-4 py-8">
+        <!-- Two Column Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+          <!-- Left Column -->
+          <div class="lg:col-span-2 space-y-8">
+            <!-- Features Section -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-4">Features</h2>
+              <div class="flex flex-wrap gap-3">
+                <span class="bg-red-600 text-white px-4 py-2 rounded text-sm font-semibold">
+                  Application Deadline: TBD
+                </span>
+                <span class="bg-red-600 text-white px-4 py-2 rounded text-sm font-semibold">
+                  Duration: 6 Months
+                </span>
+                <span class="bg-red-600 text-white px-4 py-2 rounded text-sm font-semibold">
+                  Mode: Online + 3-day Campus
+                </span>
+              </div>
+            </div>
+
+            <!-- Programme Objectives -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-4">Program Objectives</h2>
+              <p class="text-gray-700 leading-relaxed mb-3">
+                The Senior Management Program in Renewable Energy Strategy and Sustainable Leadership is designed to equip senior executives with the knowledge and skills to strategically manage and lead renewable energy initiatives.
+              </p>
+              <p class="text-gray-700 leading-relaxed mb-3">
+                Participants will gain expertise in renewable energy systems, sustainable management practices, and energy transition strategies, while learning to leverage AI and data analytics for energy optimization, performance monitoring, and ESG reporting.
+              </p>
+              <p class="text-gray-700 leading-relaxed">
+                The program enables executives to formulate and implement sustainable energy projects, ensure compliance with national and international policies and ESG standards, drive cross-functional organizational change, and foster innovation in renewable energy technologies and corporate sustainability, thereby creating long-term value and impactful business outcomes.
+              </p>
+            </div>
+
+            <!-- Class Schedule -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                Class Schedule
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </h2>
+              <p class="text-gray-600 mb-4">Programme Duration: 6 Months</p>
+              <ul class="space-y-2 text-gray-700 mb-4">
+                <li>• Total Learning Hours: 80 hours (67 hours online + 13 hours campus)</li>
+                <li>• Live online sessions every week</li>
+                <li>• 3-day Campus Visit at the beginning of the course</li>
+                <li>• Case studies and practical exercises</li>
+                <li>• AI-driven analytics and energy optimization</li>
+              </ul>
+              <p class="text-gray-700 font-semibold">Class Timings: Sunday, 9:00 AM - 12:00 PM IST</p>
+            </div>
+
+            <!-- Eligibility Criteria -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                Eligibility Criteria
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </h2>
+              <p class="text-gray-700 mb-3"><strong>For Indian Participants:</strong> Graduates (10+2+3) or Diploma Holders from a recognized university (UGC/AICTE/DEC/AIU/State Government) in any discipline.</p>
+              <p class="text-gray-700 mb-3"><strong>For International Participants:</strong> Graduation or equivalent degree from any recognized University or Institution in their respective country.</p>
+              <p class="text-gray-700"><strong>Experience:</strong> Working Professionals with 5 years of work experience</p>
+            </div>
+
+            <!-- Who should attend -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-4">Who Should Attend / Target Segment?</h2>
+              <p class="text-gray-700 mb-3">The Senior Management Program in Renewable Energy Strategy and Sustainable Leadership is designed for mid to senior professionals and decision-makers who are responsible for energy transition, sustainability, and strategic leadership initiatives in their organizations.</p>
+              <p class="text-gray-700 mb-2"><strong>The program is ideal for:</strong></p>
+              <ul class="list-disc list-inside space-y-2 text-gray-700 leading-relaxed">
+                <li>Senior Managers and Heads of Energy or Sustainability Departments – responsible for designing and implementing renewable energy and sustainability strategies</li>
+                <li>Compliance and Risk Officers – involved in regulatory compliance, energy policies, and risk assessment related to renewable energy projects</li>
+                <li>Sustainability Professionals – managing environmental and energy impact initiatives</li>
+                <li>Business Leaders and Executives – looking to integrate renewable energy and sustainability into strategic decision-making</li>
+                <li>Corporate Strategy and Governance Leaders – interested in leveraging AI and analytics for energy management and sustainability reporting</li>
+                <li>Consultants and Advisors – working on renewable energy, sustainability, or ESG projects across industries</li>
+                <li>Board Members and C-Suite Executives – aiming to drive organizational change and leadership in sustainable energy practices</li>
+              </ul>
+              <p class="text-gray-700 mt-3"><strong>Experience Level:</strong> 5–20+ years in corporate, energy, infrastructure, government, or non-profit sectors with exposure to energy management, sustainability, compliance, or strategic leadership.</p>
+            </div>
+
+            <!-- Programme Highlights -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-2xl font-bold text-purple-900 mb-6 flex items-center">
+                Programme Highlights
+              </h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+                  <p class="text-gray-700 text-sm">Certificate from DTU, an Institute of Eminence</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+                  <p class="text-gray-700 text-sm">Learn from DTU faculty and industry experts</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+                  <p class="text-gray-700 text-sm">AI and data analytics for energy optimization</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+                  <p class="text-gray-700 text-sm">3-day Campus Visit at DTU Delhi</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+                  <p class="text-gray-700 text-sm">Network with energy and sustainability professionals</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+                  <p class="text-gray-700 text-sm">Comprehensive renewable energy frameworks</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Programme Modules -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                Programme Modules
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </h2>
+              <div class="space-y-2">
+                <!-- Module 1 -->
+                <div class="border border-gray-200 rounded-lg">
+                  <button class="module-button" onclick="toggleModule(0)">
+                    <span class="font-semibold text-gray-900">Module 1: Foundations of Renewable Energy & Sustainable Leadership</span>
+                    <svg id="chevron-0" class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <div id="module-0" class="module-content">
+                    <ul class="list-disc list-inside space-y-1 mb-4 text-gray-700">
+                      <li>Week 1: Introduction to Renewable Energy & Energy Transition</li>
+                      <li>Week 2: Principles of Sustainable Leadership</li>
+                      <li>Week 3: Overview of Renewable Energy Technologies</li>
+                      <li>Week 4: Policy, Regulations, and Compliance in Renewable Energy</li>
+                    </ul>
+                    <div class="mt-4">
+                      <h4 class="text-red-600 font-bold mb-2">Learning Outcomes</h4>
+                      <p class="text-gray-700">Understand renewable energy fundamentals, sustainable leadership, and regulatory frameworks.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="border border-gray-200 rounded-lg">
+                  <button class="module-button" onclick="toggleModule(1)">
+                    <span class="font-semibold text-gray-900">Module 2: Renewable Energy Strategy & Planning</span>
+                    <svg id="chevron-1" class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <div id="module-1" class="module-content">
+                    <ul class="list-disc list-inside space-y-1 mb-4 text-gray-700">
+                      <li>Week 5: Strategic Energy Management & Planning</li>
+                      <li>Week 6: Energy Economics and Financial Modeling</li>
+                      <li>Week 7: Project Development and Implementation</li>
+                      <li>Week 8: Risk Management and ESG Integration</li>
+                    </ul>
+                    <div class="mt-4">
+                      <h4 class="text-yellow-500 font-bold mb-2">Learning Outcomes</h4>
+                      <p class="text-gray-700">Develop strategic energy plans, financial models, and ESG-integrated renewable energy projects.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="border border-gray-200 rounded-lg">
+                  <button class="module-button" onclick="toggleModule(2)">
+                    <span class="font-semibold text-gray-900">Module 3: AI & Analytics in Renewable Energy</span>
+                    <svg id="chevron-2" class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <div id="module-2" class="module-content">
+                    <ul class="list-disc list-inside space-y-1 mb-4 text-gray-700">
+                      <li>Week 9: Introduction to AI and Big Data for Energy</li>
+                      <li>Week 10: AI-Driven Energy Management and Optimization</li>
+                      <li>Week 11: Data Visualization and ESG Reporting</li>
+                      <li>Week 12: Case Studies in AI-Enabled Renewable Energy</li>
+                    </ul>
+                    <div class="mt-4">
+                      <h4 class="text-yellow-500 font-bold mb-2">Learning Outcomes</h4>
+                      <p class="text-gray-700">Leverage AI and analytics for energy forecasting, optimization, and ESG reporting.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Module 4 -->
+                <div class="border border-gray-200 rounded-lg">
+                  <button class="module-button" onclick="toggleModule(3)">
+                    <span class="font-semibold text-gray-900">Module 4: Sustainable Innovation & Leadership</span>
+                    <svg id="chevron-3" class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <div id="module-3" class="module-content">
+                    <ul class="list-disc list-inside space-y-1 mb-4 text-gray-700">
+                      <li>Week 13: Innovation in Renewable Energy Technologies</li>
+                      <li>Week 14: Corporate Strategy for Sustainable Energy</li>
+                      <li>Week 15: Change Management in Energy Transition</li>
+                      <li>Week 16: Leadership for ESG and Sustainability</li>
+                    </ul>
+                    <div class="mt-4">
+                      <h4 class="text-yellow-500 font-bold mb-2">Learning Outcomes</h4>
+                      <p class="text-gray-700">Drive innovation, corporate strategy, and change management for sustainable energy transitions.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Module 5 -->
+                <div class="border border-gray-200 rounded-lg">
+                  <button class="module-button" onclick="toggleModule(4)">
+                    <span class="font-semibold text-gray-900">Module 5: Advanced Applications & Integration</span>
+                    <svg id="chevron-4" class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <div id="module-4" class="module-content">
+                    <ul class="list-disc list-inside space-y-1 mb-4 text-gray-700">
+                      <li>Week 17: Smart Energy Solutions and Green Infrastructure</li>
+                      <li>Week 18: Renewable Energy Project Financing & Investment</li>
+                      <li>Week 19: Performance Metrics and KPIs</li>
+                      <li>Week 20: Cross-Functional Collaboration and Strategy Execution</li>
+                    </ul>
+                    <div class="mt-4">
+                      <h4 class="text-yellow-500 font-bold mb-2">Learning Outcomes</h4>
+                      <p class="text-gray-700">Implement smart energy solutions, financing strategies, and cross-functional collaboration frameworks.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Module 6 -->
+                <div class="border border-gray-200 rounded-lg">
+                  <button class="module-button" onclick="toggleModule(5)">
+                    <span class="font-semibold text-gray-900">Module 6: Capstone Project & Integration</span>
+                    <svg id="chevron-5" class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <div id="module-5" class="module-content">
+                    <ul class="list-disc list-inside space-y-1 mb-4 text-gray-700">
+                      <li>Week 21: Project Planning & Data Collection</li>
+                      <li>Week 22: AI-Driven Analytics & Strategy Formulation</li>
+                      <li>Week 23: Recommendations & Report Preparation</li>
+                      <li>Week 24: Capstone Project Presentation & Evaluation</li>
+                    </ul>
+                    <div class="mt-4">
+                      <h4 class="text-yellow-500 font-bold mb-2">Learning Outcomes</h4>
+                      <p class="text-gray-700">Apply learned concepts to develop a comprehensive renewable energy strategy with AI-driven insights.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Programme Directors -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                <svg class="w-6 h-6 mr-2 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                Program Director(s)
+              </h2>
+              <div class="flex items-start space-x-4">
+                <div class="w-20 h-20 bg-gray-200 rounded-full flex-shrink-0"></div>
+                <div class="flex-1">
+                  <h3 class="font-bold text-gray-900">Prof. M. Rizwan</h3>
+                  <p class="text-gray-600">Delhi Technological University</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certificate Sample -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-4">Certification</h2>
+              <div class="space-y-2 text-sm text-gray-700 mb-6">
+                <p>• Certificate of Successful Completion from DTU New Delhi (Those who clear both Midterm and End Term and maintain minimum 70% attendance)</p>
+                <p>• Certificate of Participation from DTU New Delhi (Those who fail to clear either the mid term or the end term but maintain minimum 70% attendance)</p>
+                <p>• Those who do not maintain minimum 70% attendance will receive no certification from the Institute</p>
+                <p class="mt-4 font-semibold">Certificate Issued By: Delhi Technological University</p>
+              </div>
+              <div class="bg-gray-100 border-2 border-gray-300 rounded-lg p-8 text-center">
+                <div class="mb-4">
+                  <h3 class="text-xl font-bold text-gray-900">Delhi Technological University</h3>
+                  <p class="text-gray-600">(DTU, New Delhi)</p>
+                </div>
+                <div class="border-2 border-gray-400 rounded p-6 bg-white">
+                  <p class="text-gray-700 mb-4">This is to certify that</p>
+                  <p class="text-xl font-bold text-gray-900 mb-4">Mr./Ms. Name Of The Participant</p>
+                  <p class="text-gray-700 mb-4">has successfully completed the</p>
+                  <p class="text-lg font-semibold text-gray-900 mb-4">Senior Management Program in Renewable Energy Strategy and Sustainable Leadership</p>
+                  <p class="text-gray-700 mb-4">held from [Start Date] onwards</p>
+                  <p class="text-gray-700">by the Delhi Technological University.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Evaluation Methodology -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-4">Evaluation Methodology</h2>
+              <p class="text-gray-700 mb-3">Evaluation methodology is at the discretion of the faculty. The methodology includes online exams, case analysis, class contribution and any other component as decided by the respective course faculties.</p>
+              <p class="text-gray-700 mb-3">A minimum of 70% attendance is a prerequisite for the successful completion of this program.</p>
+              <p class="text-gray-700">The program may require participants to work on individual/group assignments and/or projects. The main objective of such assignments/projects will be to help the participants apply their conceptual learning in the program to actual organizational decision scenarios.</p>
+            </div>
+
+            <!-- Pedagogy -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-4">Pedagogy</h2>
+              <p class="text-gray-700">This curriculum is structured to provide a comprehensive learning experience through a blend of lectures, case studies, group discussions, and practical exercises. It is designed to equip senior executives and decision-makers with a deep understanding of renewable energy systems, sustainable management, energy transition strategies, and AI-driven analytics in a leadership context. The program emphasizes practical application, enabling participants to develop actionable strategies for implementing renewable energy initiatives, managing ESG and sustainability requirements, and driving organizational innovation. In addition, it fosters peer learning and networking opportunities, allowing participants to share insights, exchange best practices, and build valuable professional connections across industries.</p>
+            </div>
+
+            <!-- Program Schedule -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-4">Program Launch Schedule</h2>
+              <div class="space-y-2 text-sm">
+                <div class="flex justify-between">
+                  <span class="text-gray-600">Admission Opening:</span>
+                  <span class="font-semibold text-gray-900">TBD</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-600">Application Closure:</span>
+                  <span class="font-semibold text-gray-900">TBD</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-600">Finalization of Selected Candidates:</span>
+                  <span class="font-semibold text-gray-900">TBD</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-600">Program Orientation:</span>
+                  <span class="font-semibold text-gray-900">TBD</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-600">Commencement of Classes:</span>
+                  <span class="font-semibold text-gray-900">TBD</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-600">Campus Visit (3 days):</span>
+                  <span class="font-semibold text-gray-900">At the beginning of course</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-600">Program Completion:</span>
+                  <span class="font-semibold text-gray-900">TBD</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Installment Schedule -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-4">Fee Structure</h2>
+              <div class="space-y-3 mb-4">
+                <div class="flex justify-between">
+                  <span class="text-gray-600">Application Fee:</span>
+                  <span class="font-semibold text-gray-900">INR 2,000 + GST</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-600">Program Fee:</span>
+                  <span class="font-semibold text-gray-900">INR 1,50,000 + GST</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-600 text-sm">Includes:</span>
+                  <span class="text-gray-700 text-sm">Campus visit charges + Study material</span>
+                </div>
+                <div class="flex justify-between border-t pt-3">
+                  <span class="text-gray-900 font-bold">Total Program Fee:</span>
+                  <span class="font-bold text-gray-900">INR 1,50,000 + GST</span>
+                </div>
+              </div>
+
+              <h3 class="text-lg font-bold text-gray-900 mb-3 mt-6">Installment Schedule</h3>
+              <div class="overflow-x-auto">
+                <table>
+                  <thead class="bg-gray-50">
+                    <tr>
+                      <th>Installment</th>
+                      <th>Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1st Installment</td>
+                      <td>₹ 50,000 + GST (Includes Campus fee + Study Material)</td>
+                    </tr>
+                    <tr>
+                      <td>2nd Installment</td>
+                      <td>₹ 50,000 + GST</td>
+                    </tr>
+                    <tr>
+                      <td>3rd Installment</td>
+                      <td>₹ 50,000 + GST</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="text-sm text-gray-600 mt-4">
+                * All payments are to be made to Delhi Technological University, New Delhi
+              </p>
+              <p class="text-sm text-gray-600">** Campus stay organized by DTU on a double occupancy basis</p>
+            </div>
+
+            <!-- Refund Policy -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-4">Refund Policy</h2>
+              <div class="space-y-3 text-gray-700">
+                <p>• Requests for refund of fees on account of cancellation of enrolment shall be considered only if such requests are received prior to closure of registration or 21 days before the commencement date of program, whichever is earlier.</p>
+                <p>• In the event of valid requests for refund of fees are received, the first installment paid (joining fee) money shall be refunded after deducting a penalty of INR 5,000/- (Administrative Charges).</p>
+                <p>• In all other cases, no refund shall be made.</p>
+              </div>
+            </div>
+
+            <!-- Batch Size -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-4">Batch Size</h2>
+              <div class="space-y-2">
+                <p class="text-gray-700"><strong>Minimum:</strong> 30 participants</p>
+                <p class="text-gray-700"><strong>Maximum:</strong> 100 participants</p>
+              </div>
+            </div>
+
+            <!-- Selection Criteria -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-4">Selection Criteria</h2>
+              <p class="text-gray-700 mb-3">Screening the Participants Profile based on the following criteria:</p>
+              <ul class="space-y-2 text-gray-700">
+                <li>• Marks in Class X</li>
+                <li>• Marks in Class XII</li>
+                <li>• Marks in Graduation</li>
+                <li>• Statement of Purpose with work experience documents</li>
+              </ul>
+            </div>
+
+            <!-- Important Points -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-4">Important Points to Note</h2>
+              <ul class="space-y-2 text-gray-700 text-sm">
+                <li>• Boarding and Lodging: Campus stay organized by DTU, New Delhi on a double occupancy basis</li>
+                <li>• The program will be delivered through Direct-to-Device format</li>
+                <li>• Program launch dates as well as installment dates are open to change as per requirement</li>
+                <li>• Corporate Nominations from Multiple Corporates are accepted</li>
+                <li>• The payment of the registration fee does not mean that you have earned the certification</li>
+                <li>• The Institute reserves every right to withhold the certification if the stipulated rules and regulations are not followed</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right Column - Advertisement Card -->
+          <div class="lg:col-span-1">
+            <div class="bg-gradient border border-gray-200 rounded-lg p-6 sticky top-4">
+              <div class="mb-4">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-xs font-semibold text-gray-700">DTU</span>
+                  <div class="text-right">
+                    <span class="text-2xl font-bold text-gray-900">#29</span>
+                    <p class="text-xs text-gray-600">NIRF 2024 (Engineering)</p>
+                  </div>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 mb-1">Senior Management Program in Renewable Energy Strategy and Sustainable Leadership</h3>
+                <p class="text-xs text-gray-600 mb-4">Strategic energy management and sustainable leadership</p>
+                <div class="space-y-2 mb-4">
+                  <div class="flex items-center space-x-2 text-sm text-gray-700">
+                    <span>AI-driven energy optimization</span>
+                  </div>
+                  <div class="flex items-center space-x-2 text-sm text-gray-700">
+                    <span>Learn from industry leaders and experts</span>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-white rounded-lg p-4 mb-4 h-48 overflow-hidden">
+                <img src="campus-image.jpg" alt="DTU Campus" class="w-full h-full object-cover rounded-lg" />
+              </div>
+              <p class="text-xs text-gray-600 mb-4">Offered by DTU Centre for Executive Programmes</p>
+              <div class="space-y-2 text-sm text-gray-700 mb-4">
+                <p>6 Months | 80 hours total (67 online + 13 campus)</p>
+                <p class="text-xs">For professionals with 5 years of work experience</p>
+              </div>
+              <div class="border-t border-gray-200 pt-4 space-y-2 text-sm">
+                <div class="flex justify-between">
+                  <span class="text-gray-600">Program Duration:</span>
+                  <span class="font-semibold">6 Months</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-600">Application Deadline:</span>
+                  <span class="font-semibold">TBD</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-600">Programme Type:</span>
+                  <span class="font-semibold">Senior Management Certificate</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-600">Status:</span>
+                  <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-semibold">Coming Soon</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-600">Total Fee:</span>
+                  <span class="font-semibold">INR 1,50,000 + GST</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-600">Application Fee:</span>
+                  <span class="font-semibold">INR 2,000 + GST</span>
+                </div>
+              </div>
+              <a href="https://saarthi.dtu.ac.in/digi_edu/sourceCode/index.php"
+                style="margin-top: 20px !important; display: block;"
+                class="text-center w-full bg-green-600 text-white py-3 px-4 rounded-lg hover:bg-yellow-600 transition-colors font-semibold">
+                Apply Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Delhi Technological University – Digital Education</p>
+  </footer>
+
+  <script>
+    let expandedModule = 0;
+
+    function toggleModule(index) {
+      const moduleContent = document.getElementById(`module-${index}`);
+      const chevron = document.getElementById(`chevron-${index}`);
+
+      if (moduleContent.classList.contains('expanded')) {
+        moduleContent.classList.remove('expanded');
+        chevron.classList.remove('rotated');
+      } else {
+        // Close previously expanded module
+        if (expandedModule !== index) {
+          const prevModule = document.getElementById(`module-${expandedModule}`);
+          const prevChevron = document.getElementById(`chevron-${expandedModule}`);
+          if (prevModule) {
+            prevModule.classList.remove('expanded');
+            prevChevron.classList.remove('rotated');
+          }
+        }
+
+        // Open clicked module
+        moduleContent.classList.add('expanded');
+        chevron.classList.add('rotated');
+        expandedModule = index;
+      }
+    }
+
+    // Open first module by default
+    toggleModule(0);
+  </script>
+</body>
+
 </html>

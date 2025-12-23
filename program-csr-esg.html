@@ -1,227 +1,1208 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Leadership Program in CSR, ESG and Corporate Sustainability - DTU" />
-    <link rel="icon" href="dtu-logo-removebg.png" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>CSR, ESG & Sustainability Programme - DTU</title>
-    <style>
-      .program-section {
-        background: white;
-        border-radius: 0.5rem;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        padding: 2rem;
-        margin-bottom: 2rem;
-      }
-      .program-section h2 {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #111827;
-        margin-bottom: 1.5rem;
-      }
-      .feature-item {
-        display: flex;
-        align-items: start;
-        gap: 0.75rem;
-        margin-bottom: 1rem;
-      }
-      .feature-icon {
-        font-size: 1.5rem;
-      }
-      .feature-text {
-        color: #374151;
-      }
-      .outcome-item {
-        display: flex;
-        align-items: start;
-        gap: 0.75rem;
-        margin-bottom: 0.75rem;
-      }
-      .outcome-check {
-        color: #2563eb;
-        margin-top: 0.25rem;
-      }
-      .curriculum-item {
-        display: flex;
-        align-items: start;
-        gap: 0.75rem;
-        margin-bottom: 0.75rem;
-      }
-      .curriculum-number {
-        color: #2563eb;
-        font-weight: 600;
-        margin-top: 0.25rem;
-      }
-      .cta-section {
-        background: #2563eb;
-        border-radius: 0.5rem;
-        padding: 2rem;
-        text-align: center;
-        color: white;
-      }
-      .cta-button {
-        background: white;
-        color: #2563eb;
-        font-weight: 600;
-        padding: 0.75rem 2rem;
-        border-radius: 0.5rem;
-        text-decoration: none;
-        display: inline-block;
-        transition: background 0.3s;
-      }
-      .cta-button:hover {
-        background: #f3f4f6;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Header -->
-    <iframe id="header-frame" src="header.html" scrolling="no"></iframe>
 
-    <main>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Leadership Program in CSR, ESG and Corporate Sustainability - DTU" />
+  <link rel="icon" href="dtu-logo-removebg.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>CSR, ESG & Sustainability Programme - DTU</title>
+  <style>
+    .bg-white {
+      background-color: white;
+    }
+
+    .bg-gray-50 {
+      background-color: #f9fafb;
+    }
+
+    .bg-gray-100 {
+      background-color: #f3f4f6;
+    }
+
+    .bg-gray-200 {
+      background-color: #e5e7eb;
+    }
+
+    .bg-blue-50 {
+      background-color: #eff6ff;
+    }
+
+    .bg-blue-100 {
+      background-color: #dbeafe;
+    }
+
+    .bg-blue-800 {
+      background-color: #1e40af;
+    }
+
+    .bg-blue-900 {
+      background-color: #1e3a8a;
+    }
+
+    .bg-red-600 {
+      background-color: #dc2626;
+    }
+
+    .bg-green-600 {
+      background-color: #16a34a;
+    }
+
+    .bg-purple-900 {
+      background-color: #581c87;
+    }
+
+    .bg-gradient {
+      background: linear-gradient(to bottom right, #eff6ff, #f9fafb);
+    }
+
+    .text-white {
+      color: white;
+    }
+
+    .text-blue-100 {
+      color: #dbeafe;
+    }
+
+    .text-blue-600 {
+      color: #2563eb;
+    }
+
+    .text-blue-800 {
+      color: #1e40af;
+    }
+
+    .text-gray-500 {
+      color: #6b7280;
+    }
+
+    .text-gray-600 {
+      color: #4b5563;
+    }
+
+    .text-gray-700 {
+      color: #374151;
+    }
+
+    .text-gray-900 {
+      color: #111827;
+    }
+
+    .text-red-600 {
+      color: #dc2626;
+    }
+
+    .text-green-600 {
+      color: #16a34a;
+    }
+
+    .text-purple-900 {
+      color: #581c87;
+    }
+
+    .border {
+      border: 1px solid #e5e7eb;
+    }
+
+    .border-gray-200 {
+      border-color: #e5e7eb;
+    }
+
+    .border-t {
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .border-2 {
+      border-width: 2px;
+    }
+
+    .border-gray-300 {
+      border-color: #d1d5db;
+    }
+
+    .border-gray-400 {
+      border-color: #9ca3af;
+    }
+
+    .rounded {
+      border-radius: 0.25rem;
+    }
+
+    .rounded-lg {
+      border-radius: 0.5rem;
+    }
+
+    .rounded-full {
+      border-radius: 9999px;
+    }
+
+    .p-4 {
+      padding: 1rem;
+    }
+
+    .p-6 {
+      padding: 1.5rem;
+    }
+
+    .p-8 {
+      padding: 2rem;
+    }
+
+    .px-2 {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+
+    .px-4 {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .py-1 {
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+    }
+
+    .py-2 {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .py-3 {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+    }
+
+    .py-4 {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .py-6 {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .py-8 {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    .pt-4 {
+      padding-top: 1rem;
+    }
+
+    .pb-4 {
+      padding-bottom: 1rem;
+    }
+
+    .m-0 {
+      margin: 0;
+    }
+
+    .mb-1 {
+      margin-bottom: 0.25rem;
+    }
+
+    .mb-2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .mb-4 {
+      margin-bottom: 1rem;
+    }
+
+    .mb-6 {
+      margin-bottom: 1.5rem;
+    }
+
+    .mt-2 {
+      margin-top: 0.5rem;
+    }
+
+    .mt-4 {
+      margin-top: 1rem;
+    }
+
+    .mt-6 {
+      margin-top: 1.5rem;
+    }
+
+    .mr-2 {
+      margin-right: 0.5rem;
+    }
+
+    .ml-2 {
+      margin-left: 0.5rem;
+    }
+
+    .max-w-7xl {
+      max-width: 80rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .min-h-screen {
+      min-height: 100vh;
+    }
+
+    .grid {
+      display: grid;
+    }
+
+    .grid-cols-1 {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .gap-3 {
+      gap: 0.75rem;
+    }
+
+    .gap-4 {
+      gap: 1rem;
+    }
+
+    .gap-6 {
+      gap: 1.5rem;
+    }
+
+    .gap-8 {
+      gap: 2rem;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .flex-wrap {
+      flex-wrap: wrap;
+    }
+
+    .flex-1 {
+      flex: 1 1 0%;
+    }
+
+    .items-center {
+      align-items: center;
+    }
+
+    .items-start {
+      align-items: flex-start;
+    }
+
+    .justify-between {
+      justify-content: space-between;
+    }
+
+    .space-x-2>*+* {
+      margin-left: 0.5rem;
+    }
+
+    .space-x-3>*+* {
+      margin-left: 0.75rem;
+    }
+
+    .space-x-4>*+* {
+      margin-left: 1rem;
+    }
+
+    .space-y-1>*+* {
+      margin-top: 0.25rem;
+    }
+
+    .space-y-2>*+* {
+      margin-top: 0.5rem;
+    }
+
+    .space-y-3>*+* {
+      margin-top: 0.75rem;
+    }
+
+    .space-y-8>*+* {
+      margin-top: 2rem;
+    }
+
+    .font-semibold {
+      font-weight: 600;
+    }
+
+    .font-bold {
+      font-weight: 700;
+    }
+
+    .text-xs {
+      font-size: 0.75rem;
+      line-height: 1rem;
+    }
+
+    .text-sm {
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+    }
+
+    .text-lg {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+
+    .text-xl {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+
+    .text-2xl {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    .leading-relaxed {
+      line-height: 1.625;
+    }
+
+    .shadow-sm {
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    .sticky {
+      position: sticky;
+    }
+
+    .top-4 {
+      top: 1rem;
+    }
+
+    .overflow-hidden {
+      overflow: hidden;
+    }
+
+    .overflow-x-auto {
+      overflow-x: auto;
+    }
+
+    .w-5 {
+      width: 1.25rem;
+    }
+
+    .w-6 {
+      width: 1.5rem;
+    }
+
+    .w-16 {
+      width: 4rem;
+    }
+
+    .w-20 {
+      width: 5rem;
+    }
+
+    .w-full {
+      width: 100%;
+    }
+
+    .h-5 {
+      height: 1.25rem;
+    }
+
+    .h-6 {
+      height: 1.5rem;
+    }
+
+    .h-16 {
+      height: 4rem;
+    }
+
+    .h-20 {
+      height: 5rem;
+    }
+
+    .h-48 {
+      height: 12rem;
+    }
+
+    .h-full {
+      height: 100%;
+    }
+
+    .object-cover {
+      object-fit: cover;
+    }
+
+    .cursor-pointer {
+      cursor: pointer;
+    }
+
+    .transition-all {
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+
+    .transition-colors {
+      transition-property: color, background-color, border-color;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+
+    .transition-shadow {
+      transition-property: box-shadow;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+
+    .hover\:bg-gray-50:hover {
+      background-color: #f9fafb;
+    }
+
+    .hover\:bg-blue-800:hover {
+      background-color: #1e40af;
+    }
+
+    .hover\:text-blue-800:hover {
+      color: #1e40af;
+    }
+
+    .hover\:shadow-md:hover {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    .module-button {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      text-align: left;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: inherit;
+    }
+
+    .module-button:hover {
+      background-color: #f9fafb;
+    }
+
+    .module-content {
+      display: none;
+      padding: 1rem;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .module-content.expanded {
+      display: block;
+    }
+
+    .chevron {
+      width: 1.25rem;
+      height: 1.25rem;
+      color: #4b5563;
+      transform: rotate(0deg);
+      transition: transform 0.3s;
+    }
+
+    .chevron.rotated {
+      transform: rotate(180deg);
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border: 1px solid #e5e7eb;
+      padding: 0.5rem 1rem;
+      text-align: left;
+    }
+
+    thead {
+      background-color: #f9fafb;
+    }
+
+    @media (min-width: 768px) {
+      .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .lg\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .lg\:col-span-1 {
+        grid-column: span 1 / span 1;
+      }
+
+      .lg\:col-span-2 {
+        grid-column: span 2 / span 2;
+      }
+    }
+
+    .list-disc {
+      list-style-type: disc;
+    }
+
+    .list-inside {
+      list-style-position: inside;
+    }
+
+    .inline-block {
+      display: inline-block;
+    }
+
+    .text-left {
+      text-align: left;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .text-right {
+      text-align: right;
+    }
+
+    .flex-shrink-0 {
+      flex-shrink: 0;
+    }
+
+    .last\:mb-0:last-child {
+      margin-bottom: 0;
+    }
+
+    .faculty-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .faculty-avatar {
+      width: 4.5rem;
+      height: 4.5rem;
+      border-radius: 9999px;
+      background-color: #e5e7eb;
+      flex-shrink: 0;
+    }
+
+    .faculty-info h3 {
+      margin: 0 0 0.25rem;
+      font-weight: 700;
+      color: #111827;
+    }
+
+    .faculty-info p {
+      margin: 0 0 0.125rem;
+      font-size: 0.875rem;
+      color: #4b5563;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <iframe id="header-frame" src="header.html" scrolling="no"></iframe>
+
+  <main>
+    <div class="bg-white min-h-screen">
       <!-- Breadcrumb -->
-      <section style="background: #f9fafb; padding: 1rem 0;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 1rem;">
-          <a href="index.html" style="color: #2563eb; font-weight: 600; text-decoration: none;">
+      <nav class="bg-gray-50 py-4">
+        <div class="max-w-7xl px-4">
+          <a href="index.html" class="text-blue-600 hover:text-blue-800 font-semibold text-sm">
             ← Back to Homepage
           </a>
         </div>
-      </section>
+      </nav>
 
-      <!-- Program Content -->
-      <section style="padding: 2rem 1rem; background: #f9fafb;">
-        <div style="max-width: 1280px; margin: 0 auto;">
-          
-          <!-- Program Header -->
-          <div class="program-section">
-            <div style="margin-bottom: 1rem;">
-              <span style="display: inline-block; background: #dbeafe; color: #1e40af; font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.625rem; border-radius: 0.25rem;">
-                Batch 01
-              </span>
+      <!-- Header Section -->
+      <div class="bg-green-600 text-white py-6">
+        <div class="max-w-7xl px-4">
+          <div class="flex items-center justify-between">
+            <div class="flex-1">
+              <h1 class="text-2xl font-bold mb-2">Leadership Program in CSR, ESG & Corporate Sustainability</h1>
+              <p class="text-blue-100 text-sm">Strategic leadership for sustainable business transformation</p>
             </div>
-            <h1 style="font-size: 2.25rem; font-weight: bold; color: #111827; margin-bottom: 1rem;">
-              Leadership Program in CSR, ESG and Corporate Sustainability
-            </h1>
-            <p style="font-size: 1.125rem; color: #4b5563; margin-bottom: 1.5rem;">
-              A comprehensive program designed to equip leaders with the knowledge and skills needed to drive corporate social responsibility, environmental, social, and governance initiatives, and sustainable business practices.
-            </p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
-              <div>
-                <span style="font-size: 0.875rem; color: #6b7280;">Duration</span>
-                <p style="font-size: 1.125rem; font-weight: 600; color: #111827;">6 Months</p>
-              </div>
-              <div>
-                <span style="font-size: 0.875rem; color: #6b7280;">Provider</span>
-                <p style="font-size: 1.125rem; font-weight: 600; color: #111827;">Offered by DTU Centre for Executive Programmes</p>
-              </div>
-              <div>
-                <span style="font-size: 0.875rem; color: #6b7280;">Cost</span>
-                <p style="font-size: 1.125rem; font-weight: 600; color: #111827;">Contact for pricing</p>
-              </div>
+            <div class="bg-red-600 px-4 py-2 rounded">
+              <span class="text-sm font-semibold">Partner: UCS LLP (VCNow)</span>
             </div>
-          </div>
-
-          <!-- Features -->
-          <div class="program-section">
-            <h2>Key Features</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
-              <div class="feature-item">
-                <span class="feature-icon">📊</span>
-                <span class="feature-text">Strategic CSR Planning and Implementation</span>
-              </div>
-              <div class="feature-item">
-                <span class="feature-icon">🌱</span>
-                <span class="feature-text">ESG Framework Development</span>
-              </div>
-              <div class="feature-item">
-                <span class="feature-icon">🤝</span>
-                <span class="feature-text">Stakeholder Engagement Strategies</span>
-              </div>
-              <div class="feature-item">
-                <span class="feature-icon">📈</span>
-                <span class="feature-text">Sustainability Reporting and Metrics</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Learning Outcomes -->
-          <div class="program-section">
-            <h2>Learning Outcomes</h2>
-            <div style="max-width: none;">
-              <div class="outcome-item">
-                <span class="outcome-check">✓</span>
-                <span class="feature-text">Develop comprehensive CSR strategies aligned with business objectives</span>
-              </div>
-              <div class="outcome-item">
-                <span class="outcome-check">✓</span>
-                <span class="feature-text">Implement effective ESG frameworks and reporting mechanisms</span>
-              </div>
-              <div class="outcome-item">
-                <span class="outcome-check">✓</span>
-                <span class="feature-text">Engage stakeholders and build sustainable partnerships</span>
-              </div>
-              <div class="outcome-item">
-                <span class="outcome-check">✓</span>
-                <span class="feature-text">Measure and report on sustainability impact</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Curriculum -->
-          <div class="program-section">
-            <h2>Curriculum</h2>
-            <div style="max-width: none;">
-              <div class="curriculum-item">
-                <span class="curriculum-number">1.</span>
-                <span class="feature-text">Introduction to CSR, ESG, and Corporate Sustainability</span>
-              </div>
-              <div class="curriculum-item">
-                <span class="curriculum-number">2.</span>
-                <span class="feature-text">Strategic CSR Planning and Implementation</span>
-              </div>
-              <div class="curriculum-item">
-                <span class="curriculum-number">3.</span>
-                <span class="feature-text">ESG Framework and Reporting Standards</span>
-              </div>
-              <div class="curriculum-item">
-                <span class="curriculum-number">4.</span>
-                <span class="feature-text">Stakeholder Management and Engagement</span>
-              </div>
-              <div class="curriculum-item">
-                <span class="curriculum-number">5.</span>
-                <span class="feature-text">Sustainable Business Models and Practices</span>
-              </div>
-              <div class="curriculum-item">
-                <span class="curriculum-number">6.</span>
-                <span class="feature-text">Impact Measurement and Evaluation</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Eligibility -->
-          <div class="program-section">
-            <h2>Eligibility</h2>
-            <p class="feature-text">
-              Graduate or diploma holder in any discipline with minimum 2 years of work experience
-            </p>
-          </div>
-
-          <!-- CTA -->
-          <div class="cta-section">
-            <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">Ready to Get Started?</h3>
-            <p style="color: #dbeafe; margin-bottom: 1.5rem;">Join this program and advance your career</p>
-            <a href="https://saarthi.dtu.ac.in/digi_edu/sourceCode/index.php" class="cta-button">Apply Now</a>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
 
-    <footer class="footer">
-      <p>&copy; 2025 Delhi Technological University – Digital Education</p>
-    </footer>
-  </body>
+      <div class="max-w-7xl px-4 py-8">
+        <!-- Two Column Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+          <!-- Left Column -->
+          <div class="lg:col-span-2 space-y-8">
+            <!-- Features Section -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-4">Features</h2>
+              <div class="flex flex-wrap gap-3">
+                <span class="bg-red-600 text-white px-4 py-2 rounded text-sm font-semibold">
+                  Application Deadline: 18th April 2026
+                </span>
+                <span class="bg-red-600 text-white px-4 py-2 rounded text-sm font-semibold">
+                  Duration: 6 Months
+                </span>
+                <span class="bg-red-600 text-white px-4 py-2 rounded text-sm font-semibold">
+                  Mode: Online + 3-day Campus
+                </span>
+              </div>
+            </div>
+
+            <!-- Programme Objectives -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-4">Program Objectives</h2>
+              <ul class="list-disc list-inside space-y-2 text-gray-700 leading-relaxed">
+                <li>
+                  Equip professionals with integrated knowledge of CSR, ESG, and corporate sustainability frameworks
+                </li>
+                <li>
+                  Develop strategic thinking and leadership aligned with sustainability goals
+                </li>
+                <li>
+                  Enable professionals to build ESG-compliant business models and reporting frameworks
+                </li>
+                <li>
+                  Expose learners to emerging trends such as green finance, tech-enabled ESG systems, and biodiversity
+                  governance
+                </li>
+              </ul>
+            </div>
+
+            <!-- Class Schedule -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                Class Schedule
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+              </h2>
+              <p class="text-gray-600 mb-4">Programme Duration: 6 Months</p>
+              <ul class="space-y-2 text-gray-700 mb-4">
+                <li>• Total Learning Hours: 84 hours (72 hours online + 12 hours campus)</li>
+                <li>• Live online sessions every week</li>
+                <li>• 3-day Campus Immersion at DTU Delhi</li>
+                <li>• Case studies and interactive sessions</li>
+                <li>• Guest lectures by industry experts</li>
+              </ul>
+              <p class="text-gray-700 font-semibold">Class Timings: Sunday, 9:00 AM - 12:10 PM IST</p>
+            </div>
+
+            <!-- Eligibility Criteria -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center">
+                Eligibility Criteria
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </h2>
+              <p class="text-gray-700 mb-3"><strong>For Indian Participants:</strong> Graduates (10+2+3) or Diploma
+                Holders from a recognized university (UGC/AICTE/DEC/AIU/State Government) in any discipline.</p>
+              <p class="text-gray-700 mb-3"><strong>For International Participants:</strong> Graduation or equivalent
+                degree from any recognized University or Institution in their respective country.</p>
+              <p class="text-gray-700"><strong>Experience:</strong> Working Professionals with 5 years of work
+                experience</p>
+            </div>
+
+            <!-- Programme Highlights -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-2xl font-bold text-purple-900 mb-6 flex items-center">
+                Programme Highlights
+              </h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+                  <p class="text-gray-700 text-sm">Certificate from DTU, an Institute of Eminence</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+                  <p class="text-gray-700 text-sm">Learn from DTU faculty and industry experts</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+                  <p class="text-gray-700 text-sm">Comprehensive ESG and sustainability frameworks</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+                  <p class="text-gray-700 text-sm">3-day Campus Immersion at DTU Delhi</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+                  <p class="text-gray-700 text-sm">Network with CSR and ESG professionals</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
+                  <p class="text-gray-700 text-sm">Executive Alumni Status & Networking Access</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Programme Modules -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                Programme Modules
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </h2>
+              <div class="space-y-2">
+                <!-- Module 1 -->
+                <div class="border border-gray-200 rounded-lg">
+                  <button class="module-button" onclick="toggleModule(0)">
+                    <span class="font-semibold text-gray-900">Module 1: Foundations of CSR, ESG & Responsible Business
+                      Leadership</span>
+                    <svg id="chevron-0" class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <div id="module-0" class="module-content">
+                    <ul class="list-disc list-inside space-y-1 mb-4 text-gray-700">
+                      <li>Week 1: Evolution of CSR & ESG | Triple Bottom Line & Stakeholder Capitalism</li>
+                      <li>Week 2: Corporate Responsibility in the SDG Era | Ethics, Governance & Accountability</li>
+                      <li>Week 3: Leadership's Role in Building Sustainable Enterprises | Responsible Decision-Making
+                      </li>
+                      <li>Week 4: CSR & ESG Trends in Emerging Economies | Business Case for Sustainability</li>
+                    </ul>
+                    <div class="mt-4">
+                      <h4 class="text-green-600 font-bold mb-2">Learning Outcomes</h4>
+                      <p class="text-gray-700">Understand the foundations of CSR and ESG frameworks, and develop
+                        responsible business leadership skills.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="border border-gray-200 rounded-lg">
+                  <button class="module-button" onclick="toggleModule(1)">
+                    <span class="font-semibold text-gray-900">Module 2: Legal, Regulatory & Global ESG Frameworks</span>
+                    <svg id="chevron-1" class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <div id="module-1" class="module-content">
+                    <ul class="list-disc list-inside space-y-1 mb-4 text-gray-700">
+                      <li>Week 5: Companies Act (Section 135), CSR Rules & SEBI's BRSR Requirements</li>
+                      <li>Week 6: Global ESG Disclosure Frameworks: GRI, SASB, TCFD, CDP, UNGC, TNFD</li>
+                      <li>Week 7: Voluntary Sustainability Standards: ISO 26000, Fairtrade, FSC | ESG Litigation Risk
+                      </li>
+                      <li>Week 8: Governance Best Practices | Corporate Accountability & Reporting Mandates</li>
+                    </ul>
+                    <div class="mt-4">
+                      <h4 class="text-green-600 font-bold mb-2">Learning Outcomes</h4>
+                      <p class="text-gray-700">Master legal and regulatory frameworks for CSR and ESG compliance at
+                        national and global levels.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="border border-gray-200 rounded-lg">
+                  <button class="module-button" onclick="toggleModule(2)">
+                    <span class="font-semibold text-gray-900">Module 3: Strategic CSR Design, Stakeholder Engagement &
+                      Social Impact</span>
+                    <svg id="chevron-2" class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <div id="module-2" class="module-content">
+                    <ul class="list-disc list-inside space-y-1 mb-4 text-gray-700">
+                      <li>Week 9: Community Need Assessment | Impact Gap Analysis & Theory of Change</li>
+                      <li>Week 10: Stakeholder Mapping, Engagement & CSR-PPP Frameworks</li>
+                      <li>Week 11: Designing High-Impact CSR Programs (Urban & Rural Focus) | Partnering with NGOs</li>
+                      <li>Week 12: Social ROI, Impact Assessment, & Outcome Tracking</li>
+                    </ul>
+                    <div class="mt-4">
+                      <h4 class="text-green-600 font-bold mb-2">Learning Outcomes</h4>
+                      <p class="text-gray-700">Design strategic CSR programs and engage stakeholders effectively for
+                        maximum social impact.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Module 4 -->
+                <div class="border border-gray-200 rounded-lg">
+                  <button class="module-button" onclick="toggleModule(3)">
+                    <span class="font-semibold text-gray-900">Module 4: ESG Metrics, Reporting & Digital
+                      Innovation</span>
+                    <svg id="chevron-3" class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <div id="module-3" class="module-content">
+                    <ul class="list-disc list-inside space-y-1 mb-4 text-gray-700">
+                      <li>Week 13: ESG KPIs, Materiality Mapping & Dashboard Design</li>
+                      <li>Week 14: Integrated Sustainability Reporting (GRI, SASB, TCFD, BRSR)</li>
+                      <li>Week 15: ESG Ratings, Greenwashing Prevention & Benchmarking (MSCI, Sustainalytics)</li>
+                      <li>Week 16: Technology in ESG: Blockchain, AI, and IoT for Compliance & Traceability</li>
+                    </ul>
+                    <div class="mt-4">
+                      <h4 class="text-green-600 font-bold mb-2">Learning Outcomes</h4>
+                      <p class="text-gray-700">Master ESG metrics, reporting standards, and leverage technology for
+                        sustainability tracking.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Module 5 -->
+                <div class="border border-gray-200 rounded-lg">
+                  <button class="module-button" onclick="toggleModule(4)">
+                    <span class="font-semibold text-gray-900">Module 5: Climate Change, Resource Management &
+                      Sustainable Finance</span>
+                    <svg id="chevron-4" class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <div id="module-4" class="module-content">
+                    <ul class="list-disc list-inside space-y-1 mb-4 text-gray-700">
+                      <li>Week 17: Net Zero, Carbon Neutrality & Science-Based Targets (SBTi)</li>
+                      <li>Week 18: Resource Efficiency, Circular Economy & Decarbonization Strategies</li>
+                      <li>Week 19: Renewable Energy Projects, Nature-Positive Business Models & TNFD</li>
+                      <li>Week 20: Green Bonds, Climate Finance, ESG Risk in Financial Reporting & Sustainable Investing
+                      </li>
+                    </ul>
+                    <div class="mt-4">
+                      <h4 class="text-green-600 font-bold mb-2">Learning Outcomes</h4>
+                      <p class="text-gray-700">Understand climate action strategies, resource management, and
+                        sustainable finance mechanisms.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Campus Immersion -->
+                <div class="border border-gray-200 rounded-lg">
+                  <button class="module-button" onclick="toggleModule(5)">
+                    <span class="font-semibold text-gray-900">3-Day Campus Immersion</span>
+                    <svg id="chevron-5" class="chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  <div id="module-5" class="module-content">
+                    <ul class="list-disc list-inside space-y-1 mb-4 text-gray-700">
+                      <li>Executive Strategy Lab: Group Simulations & Live Case Exercises</li>
+                      <li>Networking with Industry Leaders, Practitioners, and DTU Faculty</li>
+                      <li>Hands-on workshops and collaborative learning sessions</li>
+                    </ul>
+                    <div class="mt-4">
+                      <h4 class="text-green-600 font-bold mb-2">Learning Outcomes</h4>
+                      <p class="text-gray-700">Apply learned concepts in real-world scenarios and build professional
+                        networks.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Programme Directors -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-6 flex items-center">
+                <svg class="w-6 h-6 mr-2 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                Program Director(s)
+              </h2>
+              <div class="flex items-start space-x-4 mb-6">
+                <div class="w-20 h-20 bg-gray-200 rounded-full flex-shrink-0"></div>
+                <div class="flex-1">
+                  <h3 class="font-bold text-gray-900">Prof. Amit Mookerjee</h3>
+                  <p class="text-gray-600">Delhi Technological University</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-4">
+                <div class="w-20 h-20 bg-gray-200 rounded-full flex-shrink-0"></div>
+                <div class="flex-1">
+                  <h3 class="font-bold text-gray-900">Prof. Neeraj Sharma</h3>
+                  <p class="text-gray-600">Delhi Technological University</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Certificate Sample -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-4">Certification</h2>
+              <div class="space-y-2 text-sm text-gray-700 mb-6">
+                <p>• Certificate of Completion will be awarded to participants who successfully complete the program and
+                  satisfy the requisite attendance criteria.</p>
+                <p>• Certificate of Participation will be awarded to participants who are unable to clear the evaluation
+                  criteria but have the requisite attendance.</p>
+                <p>• No separate Transcript or Marksheet will be provided by DTU to participants.</p>
+                <p class="mt-4 font-semibold">Certificate Issued By: Delhi Technological University</p>
+                <p><strong>Bonus:</strong> Executive Alumni Status & Networking Access will also be granted to eligible
+                  participants.</p>
+              </div>
+              <div class="bg-gray-100 border-2 border-gray-300 rounded-lg p-8 text-center">
+                <div class="mb-4">
+                  <h3 class="text-xl font-bold text-gray-900">Delhi Technological University</h3>
+                  <p class="text-gray-600">(DTU, New Delhi)</p>
+                </div>
+                <div class="border-2 border-gray-400 rounded p-6 bg-white">
+                  <p class="text-gray-700 mb-4">This is to certify that</p>
+                  <p class="text-xl font-bold text-gray-900 mb-4">Mr./Ms. Name Of The Participant</p>
+                  <p class="text-gray-700 mb-4">has successfully completed the</p>
+                  <p class="text-lg font-semibold text-gray-900 mb-4">Leadership Program in CSR, ESG & Corporate
+                    Sustainability</p>
+                  <p class="text-gray-700 mb-4">held from 10th May 2026 onwards</p>
+                  <p class="text-gray-700">by the Delhi Technological University.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Evaluation Methodology -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-4">Evaluation Methodology</h2>
+              <p class="text-gray-700 mb-3">Evaluation methodology includes online exams, case analysis, class
+                contribution and any other component as decided by the respective course faculties.</p>
+              <p class="text-gray-700 mb-3">A minimum of 75% attendance is a prerequisite for the successful completion
+                of this programme.</p>
+              <p class="text-gray-700">The Programme may require participants to work on individual/group assignments
+                and/or projects. The main objective of such assignments/projects will be to help the participants apply
+                their conceptual learning in the Program to actual organizational decision scenarios.</p>
+            </div>
+            <!-- Pedagogy -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-4">Pedagogy</h2>
+              <p class="text-gray-700">The classes for this Program will be delivered through LIVE lectures using Direct
+                to Device (D2D) Technology. The pedagogy comprises of case studies, interactive sessions, quizzes,
+                mid-term and end-term examinations, class participation, project work and group-based presentations,
+                in-class exercises imparted by DTU's faculty to help participants gain knowledge, understanding and
+                hands-on skills to immediately apply their learning in the workplace.</p>
+            </div>
+
+            <!-- Who should attend -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-4">Who Should Attend / Target Segment?</h2>
+              <p class="text-gray-700">Mid to senior-level professionals including ESG/CSR managers, CXOs, consultants,
+                policy professionals, and sustainability officers</p>
+            </div>
+
+            <!-- Program Schedule -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-4">Program Launch Schedule</h2>
+              <div class="space-y-2 text-sm">
+                <div class="flex justify-between">
+                  <span class="text-gray-600">Sales Start:</span>
+                  <span class="font-semibold text-gray-900">5th January 2026</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-600">Application Closure:</span>
+                  <span class="font-semibold text-gray-900">18th April 2026</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-600">Selected Candidates List:</span>
+                  <span class="font-semibold text-gray-900">22nd April 2026</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-600">Technical Orientation:</span>
+                  <span class="font-semibold text-gray-900">26th April 2026</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-600">Academic Orientation:</span>
+                  <span class="font-semibold text-gray-900">3rd May 2026</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-600">Class Start:</span>
+                  <span class="font-semibold text-gray-900">10th May 2026</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-600">Campus Module:</span>
+                  <span class="font-semibold text-gray-900">TBD (Early stages)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Installment Schedule -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-4">Fee Structure</h2>
+              <div class="space-y-3 mb-4">
+                <div class="flex justify-between">
+                  <span class="text-gray-600">Application Fee:</span>
+                  <span class="font-semibold text-gray-900">INR 2,000 + GST</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-600">Program Fee:</span>
+                  <span class="font-semibold text-gray-900">INR 1,35,500 + GST</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-600">Study Material Fee:</span>
+                  <span class="font-semibold text-gray-900">INR 10,000 + GST</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-gray-600">Campus Visit Fee:</span>
+                  <span class="font-semibold text-gray-900">INR 15,000 + GST</span>
+                </div>
+                <div class="flex justify-between border-t pt-3">
+                  <span class="text-gray-900 font-bold">Total Fee (excluding app fee):</span>
+                  <span class="font-bold text-gray-900">INR 1,50,000 + GST</span>
+                </div>
+              </div>
+
+              <h3 class="text-lg font-bold text-gray-900 mb-3 mt-6">Installment Schedule</h3>
+              <div class="overflow-x-auto">
+                <table>
+                  <thead class="bg-gray-50">
+                    <tr>
+                      <th>Installment</th>
+                      <th>Due Date</th>
+                      <th>Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1st Installment</td>
+                      <td>Within 7-10 days of offer letter</td>
+                      <td>₹ 50,000 + GST</td>
+                    </tr>
+                    <tr>
+                      <td>2nd Installment</td>
+                      <td>10th June 2026</td>
+                      <td>₹ 50,000 + GST</td>
+                    </tr>
+                    <tr>
+                      <td>3rd Installment</td>
+                      <td>10th July 2026</td>
+                      <td>₹ 50,000 + GST (Incl. Campus Fees)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="text-sm text-gray-600 mt-4">
+                * GST will be additional at 18%
+              </p>
+              <p class="text-sm text-gray-600">** All payments are to be made to Delhi Technological University, Delhi
+              </p>
+            </div>
+
+            <!-- Refund Policy -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-4">Refund Policy</h2>
+              <div class="space-y-3 text-gray-700">
+                <p>• Initial amount (except the application fee) is refundable only in case the Institute rejects the
+                  application.</p>
+                <p>• No refund will be given to participants once the Program starts.</p>
+              </div>
+            </div>
+
+            <!-- Important Points -->
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h2 class="text-xl font-bold text-gray-900 mb-4">Important Points to Note</h2>
+              <ul class="space-y-2 text-gray-700 text-sm">
+                <li>• Boarding and Lodging during campus visits: AC accommodation will be provided on twin sharing basis
+                  in or around DTU Campus.</li>
+                <li>• The payment of the registration fee does not mean that you have earned the degree/certification.
+                </li>
+                <li>• The Institute reserves every right to withhold the degree/certification if the stipulated rules
+                  and regulations are not followed.</li>
+                <li>• DTU does not provide placement assistance to Executive Education Candidates.</li>
+                <li>• DTU will provide "DTU– Executive Education" alumni status to all participants successfully
+                  completing the programme.</li>
+            </div>
+        </div>
+
+        <!-- Right Column - Advertisement Card -->
+        <div class="lg:col-span-1">
+          <div class="bg-gradient border border-gray-200 rounded-lg p-6 sticky top-4">
+            <div class="mb-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-semibold text-gray-700">DTU</span>
+                <div class="text-right">
+                  <span class="text-2xl font-bold text-gray-900">#29</span>
+                  <p class="text-xs text-gray-600">NIRF 2024 (Engineering)</p>
+                </div>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-1">Leadership Program in CSR, ESG & Corporate Sustainability
+              </h3>
+              <p class="text-xs text-gray-600 mb-4">Strategic leadership for sustainable business transformation</p>
+              <div class="space-y-2 mb-4">
+                <div class="flex items-center space-x-2 text-sm text-gray-700">
+                  <span>Build ESG-compliant business models</span>
+                </div>
+                <div class="flex items-center space-x-2 text-sm text-gray-700">
+                  <span>Learn from industry leaders and experts</span>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg p-4 mb-4 h-48 overflow-hidden">
+              <img src="campus-image.jpg" alt="DTU Campus" class="w-full h-full object-cover rounded-lg" />
+            </div>
+            <p class="text-xs text-gray-600 mb-4">Program Partner: UCS LLP (VCNow)</p>
+            <div class="space-y-2 text-sm text-gray-700 mb-4">
+              <p>6 Months | 84 hours total (72 online + 12 campus)</p>
+              <p class="text-xs">For professionals with 5 years of work experience</p>
+            </div>
+            <div class="border-t border-gray-200 pt-4 space-y-2 text-sm">
+              <div class="flex justify-between">
+                <span class="text-gray-600">Class Start:</span>
+                <span class="font-semibold">10th May 2026</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Application Deadline:</span>
+                <span class="font-semibold">18th April 2026</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Programme Type:</span>
+                <span class="font-semibold">Online Certificate</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Status:</span>
+                <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-semibold">Admissions Open</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Total Fee:</span>
+                <span class="font-semibold">INR 1,50,000 + GST</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Application Fee:</span>
+                <span class="font-semibold">INR 2,000 + GST</span>
+              </div>
+            </div>
+            <a href="https://saarthi.dtu.ac.in/digi_edu/sourceCode/index.php"
+              style="margin-top: 20px !important; display: block;"
+              class="text-center w-full bg-green-600 text-white py-3 px-4 rounded-lg hover:bg-green-700 transition-colors font-semibold">
+              Apply Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Delhi Technological University – Digital Education</p>
+  </footer>
+
+  <script>
+    let expandedModule = 0;
+
+    function toggleModule(index) {
+      const moduleContent = document.getElementById(`module-${index}`);
+      const chevron = document.getElementById(`chevron-${index}`);
+
+      if (moduleContent.classList.contains('expanded')) {
+        moduleContent.classList.remove('expanded');
+        chevron.classList.remove('rotated');
+      } else {
+        // Close previously expanded module
+        if (expandedModule !== index) {
+          const prevModule = document.getElementById(`module-${expandedModule}`);
+          const prevChevron = document.getElementById(`chevron-${expandedModule}`);
+          if (prevModule) {
+            prevModule.classList.remove('expanded');
+            prevChevron.classList.remove('rotated');
+          }
+        }
+
+        // Open clicked module
+        moduleContent.classList.add('expanded');
+        chevron.classList.add('rotated');
+        expandedModule = index;
+      }
+    }
+
+    // Open first module by default
+    toggleModule(0);
+  </script>
+</body>
+
 </html>
